@@ -1,0 +1,167 @@
+{
+  "nav": {
+    "home": "TRANG CHỦ",
+    "booking": "ĐẶT VÉ",
+    "events": "SỰ KIỆN",
+    "travel": "DU LỊCH",
+    "partners": "ĐỐI TÁC",
+    "blog": "BLOG",
+    "flight": "CHUYẾN BAY"
+  },
+  "footer": {
+    "cta_title": "Bạn đã sẵn sàng trải nghiệm Ninh Bình chưa?",
+    "cta_desc": "Hãy để chúng tôi giúp bạn khám phá Tràng An, Hang Múa, Tam Cốc và những di sản tuyệt đẹp theo cách trọn vẹn nhất.",
+    "cta_button": "Bắt đầu hành trình của bạn →",
+    "brand_title": "NinhBinh Travel",
+    "brand_desc": "Khám phá vẻ đẹp của cố đô Hoa Lư với các tour tận hưởng thiên nhiên, văn hóa và ẩm thực.",
+    "explore": "Khám phá",
+    "explore_items": {
+      "home": "Trang chủ",
+      "tours": "Tour Ninh Bình",
+      "highlights": "Điểm đến nổi bật",
+      "blog": "Blog du lịch"
+    },
+    "support": "Hỗ trợ",
+    "support_items": {
+      "faq": "Câu hỏi thường gặp",
+      "policy": "Chính sách hoàn hủy",
+      "contact": "Liên hệ tư vấn",
+      "helpdesk": "Hỗ trợ khách hàng"
+    },
+    "contact": "Thông tin liên hệ",
+    "contact_items": {
+      "address": "📍 Ninh Bình, Việt Nam",
+      "phone": "📞 0987 654 321",
+      "email": "✉️ contact@ninhbinhtravel.vn"
+    },
+    "copyright": "© 2025 NinhBinh Travel. Tất cả quyền được bảo lưu."
+  },
+  "booking": {
+    "title": "QUY TRÌNH ĐẶT VÉ",
+    "desc": "Chỉ 6 bước đơn giản – Bạn đã sẵn sàng bay chưa?",
+    "steps": {
+      "contact": "Liên hệ",
+      "contact_desc": "Chat với chúng tôi",
+      "pick_date": "Chọn ngày bay",
+      "pick_date_desc": "Chọn khung giờ phù hợp",
+      "pick_package": "Chọn gói tour",
+      "pick_package_desc": "Xem chi tiết tour",
+      "payment": "Thanh toán",
+      "payment_desc": "An toàn & nhanh chóng",
+      "ticket": "Nhận vé",
+      "ticket_desc": "Vé điện tử qua email",
+      "fly": "Bay cao",
+      "fly_desc": "Trải nghiệm tuyệt vời!"
+    }
+  },
+  "tours": {
+    "section_title": "CÁC GÓI TOUR",
+    "section_subtitle": "Trải nghiệm độc đáo tại Hạ Long – nơi bạn vừa lướt trên mây vừa lưu giữ những khoảnh khắc khó quên...",
+    "highlights_label": "ĐIỂM NỔI BẬT:",
+    "button_book": "ĐẶT NGAY",
+    "items": [
+      {
+        "title": "ĐÁNH THỨC TÂM HỒN",
+        "desc": "Trải nghiệm bay dù lượn ngắm cảnh Hạ Long từ trên cao, chiêm ngưỡng Vịnh Hạ Long – kỳ quan thiên nhiên thế giới.",
+        "highlights": [
+          "Vịnh Hạ Long – Di sản UNESCO",
+          "Đảo Tuần Châu – Trung tâm nghỉ dưỡng",
+          "Hang Sửng Sốt – Hang đẹp nhất",
+          "Làng chài Cửa Vạn"
+        ]
+      },
+      {
+        "title": "VƯƠNG QUỐC ÁNH SÁNG",
+        "desc": "Bay và ngắm bình minh hoặc hoàng hôn tuyệt đẹp trên Vịnh Hạ Long.",
+        "highlights": [
+          "Bình minh & Hoàng hôn trên Vịnh",
+          "Đảo Tuần Châu & Hang Sửng Sốt",
+          "Làng chài Cửa Vạn"
+        ]
+      },
+      {
+        "title": "HÀNH TRÌNH TRỌN VẸN",
+        "desc": "Trải nghiệm bay trọn vẹn với tầm nhìn đẹp nhất từ trên cao.",
+        "highlights": [
+          "Bay qua Hang Sửng Sốt & Làng chài",
+          "Cầu Bãi Cháy – Biểu tượng",
+          "Bãi biển Bãi Cháy"
+        ]
+      }
+    ]
+  },
+  "news": {
+    "section_title": "TIN TỨC & SỰ KIỆN",
+    "items": [
+      {
+        "tag": "NINH BINH",
+        "title": "Khám phá Tràng An – Di sản văn hóa & thiên nhiên thế giới",
+        "date": "05 THÁNG 12 2025"
+      },
+      {
+        "tag": "DU LỊCH",
+        "title": "Chinh phục Hang Múa – Nơi ngắm toàn cảnh Tam Cốc đẹp nhất",
+        "date": "20 THÁNG 11 2025"
+      },
+      {
+        "tag": "TRẢI NGHIỆM",
+        "title": "Tam Cốc mùa lúa chín – Vẻ đẹp vàng rực hiếm nơi nào có",
+        "date": "10 THÁNG 12 2025"
+      }
+    ]
+  },
+  "location": {
+    "title": "VỊ TRÍ ĐỊA LÝ",
+    "subtitle": "Điểm cất cánh đẹp nhất TP.HCM – View triệu đô hướng sông Sài Gòn & Landmark 81",
+    "card": {
+      "title": "ĐIỂM CẤT CÁNH",
+      "city": "TP. HỒ CHÍ MINH"
+    },
+    "address": {
+      "label": "Địa chỉ chính xác:",
+      "content": "Số 10 đường T\nKhu đô thị Lakeview City, Phường An Phú\nTP. Thủ Đức, TP. Hồ Chí Minh"
+    },
+    "hours": {
+      "label": "Giờ bay:",
+      "value": "06:00 – 18:00 hàng ngày"
+    },
+    "hotline": {
+      "label": "Hotline:",
+      "number": "090 123 4567"
+    },
+    "map": {
+      "button": "Xem đường đi ngay"
+    },
+    "status": "Đang hoạt động",
+    "timeline": {
+      "title": "HÀNH TRÌNH BAY CỦA BẠN",
+      "subtitle": "Quy trình bay chuẩn quốc tế – an toàn, bài bản và mượt mà.",
+      "steps": [
+        { "label": "CHUẨN BỊ", "title": "Bước 1", "desc": "Nhận briefing an toàn và hướng dẫn bay." },
+        { "label": "TRANG BỊ", "title": "Bước 2", "desc": "Trang bị đầy đủ bảo hộ chuyên dụng." },
+        { "label": "KIỂM TRA", "title": "Bước 3", "desc": "Tiếp cận bãi cất cánh và kiểm tra lần cuối." },
+        { "label": "CẤT CÁNH", "title": "Bước 4", "desc": "Cất cánh – trải nghiệm bay tự do." },
+        { "label": "HẠ CÁNH", "title": "Bước 5", "desc": "Hạ cánh an toàn & kết thúc hành trình." }
+      ]
+    }
+  },
+  "testimonials": {
+    "title": "KHÁCH HÀNG CHIA SẺ",
+    "subtitle": "Hơn 12.000 chuyến bay • 100% muốn quay lại lần nữa",
+    "watch_title": "Xem khách bay thực tế",
+    "watch_subtitle": "Cảm xúc thật – Hành trình thật – Bay thật",
+    "video_note": "Video được quay thực tế tại Đà Lạt • Phi công có chứng chỉ quốc tế",
+    "cta": {
+      "top": "BÂY GIỜ LÀ LƯỢT",
+      "bottom": "CỦA BẠN"
+    },
+    "items": [
+      { "name": "Ngọc Anh", "role": "Đã bay 7 lần", "text": "Ninh Bình thật sự yên bình đúng như tên gọi. Cảnh núi non hữu tình quá đẹp!" },
+      { "name": "Chị Xuân", "role": "Travel Blogger", "text": "Đi Tràng An một lần là nhớ cả đời. Nước xanh, núi đá, trời mây hội tụ." },
+      { "name": "Cô Lan", "role": "Singapore", "text": "Tam Cốc buổi sáng sương mờ đẹp như tranh. Một trải nghiệm đáng thử." },
+      { "name": "Anh Minh", "role": "Bay 12 lần", "text": "Tuyệt Tình Cốc có màu nước xanh ngọc đặc trưng, lên hình rất nổi bật, là điểm check-in mới nổi được giới trẻ yêu thích." },
+      { "name": "Chị Diệp", "role": "Lần đầu bay", "text": "Khu du lịch Tuyệt Tình Cốc khá vắng, chụp ảnh siêu đẹp, thích hợp đi cặp đôi." },
+      { "name": "Chị Xuân", "role": "Travel Blogger", "text": "Không chỉ đẹp, Ninh Bình còn mang vẻ trầm mặc rất Việt Nam. Rất xứng đáng để quay lại." }
+    ]
+  }
+}

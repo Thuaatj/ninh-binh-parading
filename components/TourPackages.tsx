@@ -3,53 +3,43 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
+import type { TFunction } from "i18next";
 
-const tours = [
-  {
-    id: 1,
-    tag: "01",
-    title: "ĐÁNH THỨC TÂM HỒN",
-    desc: "Trải nghiệm bay dù lượn ngắm cảnh Hạ Long từ trên cao, chiêm ngưỡng Vịnh Hạ Long – kỳ quan thiên nhiên thế giới.",
-    highlights: [
-      "Vịnh Hạ Long – Di sản UNESCO",
-      "Đảo Tuần Châu – Trung tâm nghỉ dưỡng",
-      "Hang Sửng Sốt – Hang đẹp nhất",
-      "Làng chài Cửa Vạn",
-    ],
-    price: "2.800.000đ",
-    image: "https://thesinhtour.com/wp-content/uploads/2025/04/trang_an_ninh_binh.jpg",
-  },
-  {
-    id: 2,
-    tag: "02",
-    tagColor: "from-yellow-400 to-orange-500",
-    title: "VƯƠNG QUỐC ÁNH SÁNG",
-    desc: "Bay và ngắm bình minh hoặc hoàng hôn tuyệt đẹp trên Vịnh Hạ Long.",
-    highlights: [
-      "Bình minh & Hoàng hôn trên Vịnh",
-      "Đảo Tuần Châu & Hang Sửng Sốt",
-      "Làng chài Cửa Vạn",
-    ],
-    price: "3.500.000đ",
-    hot: true,
-    image: "https://halongparagliding.com/wp-content/uploads/2025/11/z7260492117256_67a136e437d0353ea1eb1bff96adcd9b.jpg",
-  },
-  {
-    id: 3,
-    tag: "03",
-    title: "HÀNH TRÌNH TRỌN VẸN",
-    desc: "Trải nghiệm bay trọn vẹn với tầm nhìn đẹp nhất từ trên cao.",
-    highlights: [
-      "Bay qua Hang Sửng Sốt & Làng chài",
-      "Cầu Bãi Cháy – Biểu tượng",
-      "Bãi biển Bãi Cháy",
-    ],
-    price: "4.200.000đ",
-    image: "https://halongparagliding.com/wp-content/uploads/2025/11/z7260492120163_63794d4dbef5656cb23f058445ea2f69.jpg",
-  },
-];
+function getToursData(t: TFunction) {
+  const base = [
+    {
+      id: 1,
+      tag: "01",
+      price: "2.800.000đ",
+      image: "https://thesinhtour.com/wp-content/uploads/2025/04/trang_an_ninh_binh.jpg",
+    },
+    {
+      id: 2,
+      tag: "02",
+      tagColor: "from-yellow-400 to-orange-500",
+      price: "3.500.000đ",
+      hot: true,
+      image: "https://halongparagliding.com/wp-content/uploads/2025/11/z7260492117256_67a136e437d0353ea1eb1bff96adcd9b.jpg",
+    },
+    {
+      id: 3,
+      tag: "03",
+      price: "4.200.000đ",
+      image: "https://halongparagliding.com/wp-content/uploads/2025/11/z7260492120163_63794d4dbef5656cb23f058445ea2f69.jpg",
+    },
+  ];
+  const localized = t("tours.items", { returnObjects: true }) as Array<{
+    title: string;
+    desc: string;
+    highlights: string[];
+  }>;
+  return base.map((b, i) => ({ ...b, ...localized[i] }));
+}
 
 export default function TourPackages() {
+  const { t } = useTranslation("common");
+  const tours = getToursData(t);
   return (
     <section className="py-24 lg:py-32 bg-gradient-to-b from-gray-50 via-white to-gray-50">
       <div className="container mx-auto px-6 lg:px-12">
@@ -98,10 +88,10 @@ export default function TourPackages() {
 
   {/* Chữ phụ (tùy chọn giữ lại nếu muốn) */}
   <h2 className="mt-6 text-5xl lg:text-7xl font-black tracking-tight text-center bg-gradient-to-r from-gray-900 via-cyan-700 to-gray-900 bg-clip-text text-transparent">
-    CÁC GÓI TOUR
+    {t("tours.section_title")}
   </h2>
   <p className="mt-4 text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
-    Trải nghiệm độc đáo tại Hạ Long – nơi bạn vừa lướt trên mây vừa lưu giữ những khoảnh khắc khó quên...
+    {t("tours.section_subtitle")}
   </p>
 </motion.div>
 
@@ -185,7 +175,7 @@ export default function TourPackages() {
                   </p>
 
                   <div className="space-y-2 mb-6">
-                    <p className="font-bold text-gray-700 text-sm">ĐIỂM NỔI BẬT:</p>
+                    <p className="font-bold text-gray-700 text-sm">{t("tours.highlights_label")}</p>
                     {tour.highlights.map((item) => (
                       <div key={item} className="flex items-center gap-2">
                         <svg className="w-4 h-4 text-pink-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -204,7 +194,7 @@ export default function TourPackages() {
                               text-black shadow-[0_4px_14px_rgba(0,0,0,0.1)]
                               border-2 border-pink-300 bg-white overflow-hidden group/button"
                   >
-                    <span className="relative z-20">ĐẶT NGAY</span>
+                    <span className="relative z-20">{t("tours.button_book")}</span>
 
                     {/* LAYER: Gradient quét chạy */}
                     <motion.div

@@ -1,25 +1,21 @@
-// components/LanguageSwitcher.tsx – CHỈ ĐỂ TRANG TRÍ, KHÔNG ĐỔI NGÔN NGỮ, KHÔNG LỖI
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const languages = [
   { code: "vi", name: "VI", flag: "https://flagcdn.com/w40/vn.png" },
   { code: "en", name: "EN", flag: "https://flagcdn.com/w40/gb.png" },
-  { code: "kr", name: "KR", flag: "https://flagcdn.com/w40/kr.png" },
-  { code: "jp", name: "JP", flag: "https://flagcdn.com/w40/jp.png" },
-  { code: "tw", name: "TW", flag: "https://flagcdn.com/w40/tw.png" },
-  { code: "sg", name: "SG", flag: "https://flagcdn.com/w40/sg.png" },
-  { code: "th", name: "TH", flag: "https://flagcdn.com/w40/th.png" },
 ];
 
 export default function LanguageSwitcher({ scrolled }: { scrolled: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
-
-  // Luôn hiển thị cờ Việt Nam (hoặc Anh tùy bạn thích)
-  const currentLang = languages[0]; // VIệt Nam
+  const { i18n } = useTranslation();
+  const currentLang = useMemo(() => {
+    return languages.find(l => l.code === i18n.language) || languages[0];
+  }, [i18n.language]);
 
   return (
     <div className="relative">
@@ -66,7 +62,11 @@ export default function LanguageSwitcher({ scrolled }: { scrolled: boolean }) {
               <motion.div
                 key={lang.code}
                 whileHover={{ backgroundColor: "#ecfeff" }}
-                className="flex items-center gap-4 w-full px-5 py-4 cursor-default"
+                className="flex items-center gap-4 w-full px-5 py-4 cursor-pointer"
+                onClick={() => {
+                  i18n.changeLanguage(lang.code);
+                  setIsOpen(false);
+                }}
               >
                 <Image src={lang.flag} alt={lang.name} width={36} height={27} className="rounded-sm shadow" />
                 <span className="font-semibold text-gray-800">{lang.name}</span>

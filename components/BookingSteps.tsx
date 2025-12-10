@@ -3,6 +3,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import { 
   MessageCircle, 
   Calendar, 
@@ -13,15 +14,16 @@ import {
 } from "lucide-react";
 
 const steps = [
-  { icon: MessageCircle, title: "Liên hệ", desc: "Chat với chúng tôi" },
-  { icon: Calendar, title: "Chọn ngày bay", desc: "Chọn khung giờ phù hợp" },
-  { icon: MapPin, title: "Chọn gói tour", desc: "Xem chi tiết tour" },
-  { icon: CreditCard, title: "Thanh toán", desc: "An toàn & nhanh chóng" },
-  { icon: Ticket, title: "Nhận vé", desc: "Vé điện tử qua email" },
-  { icon: Cloud, title: "Bay cao", desc: "Trải nghiệm tuyệt vời!" },
+  { key: "contact", icon: MessageCircle },
+  { key: "pick_date", icon: Calendar },
+  { key: "pick_package", icon: MapPin },
+  { key: "payment", icon: CreditCard },
+  { key: "ticket", icon: Ticket },
+  { key: "fly", icon: Cloud },
 ];
 
 export default function BookingSteps() {
+  const { t } = useTranslation("common");
   return (
     <section className="py-20 lg:py-32 bg-gradient-to-b from-white to-cyan-50 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
@@ -34,9 +36,9 @@ export default function BookingSteps() {
           className="text-center mb-12 lg:mb-16"
         >
 878          <h2 className="text-4xl lg:text-6xl font-black tracking-tight bg-gradient-to-r from-gray-800 via-cyan-700 to-gray-900 bg-clip-text text-transparent">
-            QUY TRÌNH ĐẶT VÉ
+            {t("booking.title")}
           </h2>
-          <p className="mt-4 text-lg text-gray-600">Chỉ 6 bước đơn giản – Bạn đã sẵn sàng bay chưa?</p>
+          <p className="mt-4 text-lg text-gray-600">{t("booking.desc")}</p>
         </motion.div>
 
         {/* STEPS – Desktop: ngang, Mobile: dọc nhưng cực gọn */}
@@ -80,10 +82,10 @@ export default function BookingSteps() {
 
               {/* Tiêu đề + mô tả */}
               <h3 className="font-bold text-gray-900 text-sm lg:text-base mt-2">
-                {step.title}
+                {t(`booking.steps.${step.key}`)}
               </h3>
               <p className="text-xs lg:text-sm text-gray-600 mt-1 max-w-32 leading-tight">
-                {step.desc}
+                {t(`booking.steps.${step.key}_desc`)}
               </p>
             </motion.div>
           ))}

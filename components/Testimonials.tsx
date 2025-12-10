@@ -5,15 +5,9 @@ import Image from "next/image";
 import { Star, Play } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 import { FaVolumeUp, FaVolumeMute } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
-const testimonials = [
-  { name: "Ngọc Anh", role: "Đã bay 7 lần", text: "Ninh Bình thật sự yên bình đúng như tên gọi. Cảnh núi non hữu tình quá đẹp!", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&h=800&fit=crop&crop=face" },
-  { name: "Chị Xuân", role: "Travel Blogger", text: "Đi Tràng An một lần là nhớ cả đời. Nước xanh, núi đá, trời mây hội tụ.", avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&h=800&fit=crop&crop=face" },
-  { name: "Cô Lan", role: "Singapore", text: "Tam Cốc buổi sáng sương mờ đẹp như tranh. Một trải nghiệm đáng thử.", avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=800&fit=crop&crop=face" },
-  { name: "Anh Minh", role: "Bay 12 lần", text: "Tuyệt Tình Cốc có màu nước xanh ngọc đặc trưng, lên hình rất nổi bật, là điểm check-in mới nổi được giới trẻ yêu thích.", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=800&fit=crop&crop=face" },
-  { name: "Chị Diệp", role: "Lần đầu bay", text: "Khu du lịch Tuyệt Tình Cốc khá vắng, chụp ảnh siêu đẹp, thích hợp đi cặp đôi.", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=800&fit=crop&crop=face" },
-  { name: "Chị Xuân", role: "Travel Blogger", text: "Không chỉ đẹp, Ninh Bình còn mang vẻ trầm mặc rất Việt Nam. Rất xứng đáng để quay lại.", avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&h=800&fit=crop&crop=face" },
-];
+// testimonials from i18n resources will be mapped with avatars inside component
 
 /* ==== Component Video mới: Auto-play khi scroll, click để pause/play ==== */
 function VideoExperience() {
@@ -111,6 +105,17 @@ const [isMuted, setIsMuted] = useState(true);
 }
 
 export default function TestimonialWithVideo() {
+  const { t } = useTranslation("common");
+  const avatars = [
+    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&h=800&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&h=800&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=800&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=800&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=800&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&h=800&fit=crop&crop=face",
+  ];
+  const items = t("testimonials.items", { returnObjects: true }) as Array<{ name: string; role: string; text: string }>;
+  const testimonials = items.map((it, i) => ({ ...it, avatar: avatars[i] }));
   return (
     <section className="py-24 lg:py-40 bg-gradient-to-b from-white via-emerald-50/20 to-white overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
@@ -124,10 +129,10 @@ export default function TestimonialWithVideo() {
           className="text-center mb-16 lg:mb-28"
         >
           <h2 className="text-6xl lg:text-8xl font-black tracking-tighter text-gray-900 leading-none">
-            KHÁCH HÀNG CHIA SẺ
+            {t("testimonials.title")}
           </h2>
           <p className="mt-6 text-xl lg:text-2xl text-gray-600 font-light">
-            Hơn 12.000 chuyến bay • 100% muốn quay lại lần nữa
+            {t("testimonials.subtitle")}
           </p>
         </motion.div>
 
@@ -182,17 +187,17 @@ export default function TestimonialWithVideo() {
         >
           <div className="text-center mb-12">
             <h3 className="text-4xl lg:text-6xl font-black tracking-tight text-gray-900">
-              Xem khách bay thực tế
+              {t("testimonials.watch_title")}
             </h3>
             <p className="mt-4 text-lg lg:text-xl text-gray-600">
-              Cảm xúc thật – Hành trình thật – Bay thật
+              {t("testimonials.watch_subtitle")}
             </p>
           </div>
 
           <VideoExperience />
 
           <p className="text-center mt-8 text-lg text-gray-600 italic">
-            Video được quay thực tế tại Đà Lạt • Phi công có chứng chỉ quốc tế
+            {t("testimonials.video_note")}
           </p>
         </motion.div>
 
@@ -205,7 +210,7 @@ export default function TestimonialWithVideo() {
           className="text-center mt-32 lg:mt-40"
         >
           <p className="text-5xl lg:text-7xl font-black tracking-tighter text-gray-900">
-            BÂY GIỜ LÀ LƯỢT
+            {t("testimonials.cta.top")}
           </p>
           <motion.p
             className="text-6xl lg:text-8xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-cyan-600 to-teal-700 -mt-6 lg:-mt-12"
@@ -213,14 +218,11 @@ export default function TestimonialWithVideo() {
             transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
             style={{ backgroundSize: "200% 200%" }}
           >
-            CỦA BẠN
+            {t("testimonials.cta.bottom")}
           </motion.p>
         </motion.div>
       </div>
     </section>
   );
-}
-function setIsMuted(muted: boolean) {
-  throw new Error("Function not implemented.");
 }
 

@@ -1,0 +1,167 @@
+{
+  "nav": {
+    "home": "HOME",
+    "booking": "BOOKING",
+    "events": "EVENTS",
+    "travel": "TRAVEL",
+    "partners": "PARTNERS",
+    "blog": "BLOG",
+    "flight": "FLIGHT"
+  },
+  "footer": {
+    "cta_title": "Ready to experience Ninh Binh?",
+    "cta_desc": "Let us help you explore Trang An, Hang Mua, Tam Coc and heritage sites the most complete way.",
+    "cta_button": "Start your journey →",
+    "brand_title": "NinhBinh Travel",
+    "brand_desc": "Discover Hoa Lu ancient capital with tours embracing nature, culture and cuisine.",
+    "explore": "Explore",
+    "explore_items": {
+      "home": "Home",
+      "tours": "Ninh Binh Tours",
+      "highlights": "Top Destinations",
+      "blog": "Travel Blog"
+    },
+    "support": "Support",
+    "support_items": {
+      "faq": "FAQ",
+      "policy": "Refund policy",
+      "contact": "Contact advisory",
+      "helpdesk": "Customer support"
+    },
+    "contact": "Contact information",
+    "contact_items": {
+      "address": "📍 Ninh Binh, Vietnam",
+      "phone": "📞 +84 987 654 321",
+      "email": "✉️ contact@ninhbinhtravel.vn"
+    },
+    "copyright": "© 2025 NinhBinh Travel. All rights reserved."
+  },
+  "booking": {
+    "title": "BOOKING PROCESS",
+    "desc": "Just 6 simple steps – ready to fly?",
+    "steps": {
+      "contact": "Contact",
+      "contact_desc": "Chat with us",
+      "pick_date": "Pick flight date",
+      "pick_date_desc": "Choose a suitable time",
+      "pick_package": "Choose tour package",
+      "pick_package_desc": "See package details",
+      "payment": "Payment",
+      "payment_desc": "Safe & fast",
+      "ticket": "Get ticket",
+      "ticket_desc": "E-ticket via email",
+      "fly": "Fly high",
+      "fly_desc": "Amazing experience!"
+    }
+  },
+  "tours": {
+    "section_title": "TOUR PACKAGES",
+    "section_subtitle": "Unique experiences in Ha Long – glide above the clouds and save unforgettable moments...",
+    "highlights_label": "HIGHLIGHTS:",
+    "button_book": "BOOK NOW",
+    "items": [
+      {
+        "title": "Awaken the Soul",
+        "desc": "Paragliding over Ha Long Bay, admire the world natural wonder.",
+        "highlights": [
+          "Ha Long Bay – UNESCO Heritage",
+          "Tuan Chau Island – Resort hub",
+          "Sung Sot Cave – Most beautiful cave",
+          "Cua Van Floating Village"
+        ]
+      },
+      {
+        "title": "Kingdom of Light",
+        "desc": "Fly and enjoy stunning sunrise or sunset over Ha Long Bay.",
+        "highlights": [
+          "Sunrise & Sunset over the Bay",
+          "Tuan Chau Island & Sung Sot Cave",
+          "Cua Van Floating Village"
+        ]
+      },
+      {
+        "title": "Complete Journey",
+        "desc": "Full paragliding experience with the most beautiful viewpoints.",
+        "highlights": [
+          "Over Sung Sot Cave & fishing village",
+          "Bai Chay Bridge – Iconic",
+          "Bai Chay Beach"
+        ]
+      }
+    ]
+  },
+  "news": {
+    "section_title": "NEWS & EVENTS",
+    "items": [
+      {
+        "tag": "NINH BINH",
+        "title": "Explore Trang An – World cultural & natural heritage",
+        "date": "05 DECEMBER 2025"
+      },
+      {
+        "tag": "TRAVEL",
+        "title": "Conquer Hang Mua – Best viewpoint over Tam Coc",
+        "date": "20 NOVEMBER 2025"
+      },
+      {
+        "tag": "EXPERIENCE",
+        "title": "Tam Coc in rice season – Mesmerizing golden beauty",
+        "date": "10 DECEMBER 2025"
+      }
+    ]
+  },
+  "location": {
+    "title": "GEOGRAPHICAL LOCATION",
+    "subtitle": "Most beautiful takeoff spot in HCMC – Million-dollar view to Saigon River & Landmark 81",
+    "card": {
+      "title": "TAKEOFF POINT",
+      "city": "HO CHI MINH CITY"
+    },
+    "address": {
+      "label": "Exact address:",
+      "content": "No. 10 T Street\nLakeview City, An Phu Ward\nThu Duc City, Ho Chi Minh City"
+    },
+    "hours": {
+      "label": "Flight hours:",
+      "value": "06:00 – 18:00 daily"
+    },
+    "hotline": {
+      "label": "Hotline:",
+      "number": "+84 90 123 4567"
+    },
+    "map": {
+      "button": "View directions"
+    },
+    "status": "Active",
+    "timeline": {
+      "title": "YOUR FLIGHT JOURNEY",
+      "subtitle": "International-standard process – safe, methodical and smooth.",
+      "steps": [
+        { "label": "PREPARE", "title": "Step 1", "desc": "Receive safety briefing and flight guidance." },
+        { "label": "GEAR UP", "title": "Step 2", "desc": "Equip full specialized protective gear." },
+        { "label": "CHECK", "title": "Step 3", "desc": "Approach takeoff area and final check." },
+        { "label": "TAKE OFF", "title": "Step 4", "desc": "Take off – enjoy free flight." },
+        { "label": "LAND", "title": "Step 5", "desc": "Land safely & end the journey." }
+      ]
+    }
+  },
+  "testimonials": {
+    "title": "CUSTOMERS SHARE",
+    "subtitle": "Over 12,000 flights • 100% want to return",
+    "watch_title": "See real flight customers",
+    "watch_subtitle": "Real emotions – Real journey – Real flight",
+    "video_note": "Video shot in real conditions in Da Lat • Pilots are internationally certified",
+    "cta": {
+      "top": "NOW IT'S",
+      "bottom": "YOUR TURN"
+    },
+    "items": [
+      { "name": "Ngoc Anh", "role": "Flew 7 times", "text": "Ninh Binh is truly peaceful as its name. Scenic mountains are stunning!" },
+      { "name": "Chi Xuan", "role": "Travel Blogger", "text": "Trang An once and you’ll remember for life. Green water, limestone mountains, clouds gather." },
+      { "name": "Co Lan", "role": "Singapore", "text": "Tam Coc in the misty morning is like a painting. A must-try experience." },
+      { "name": "Anh Minh", "role": "Flew 12 times", "text": "Tuyet Tinh Coc has its iconic turquoise water, very photogenic, a new trending check-in spot." },
+      { "name": "Chi Diep", "role": "First time flying", "text": "Tuyet Tinh Coc is quite quiet, photos are amazing, great for couples." },
+      { "name": "Chi Xuan", "role": "Travel Blogger", "text": "Not only beautiful, Ninh Binh has a profound, Vietnamese serenity. Definitely worth returning." }
+    ]
+  }
+}

@@ -1,21 +1,24 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
+
 export default function FooterNinhBinh() {
+  const { t } = useTranslation("common");
   return (
     <footer className="bg-[#0a1a2f] text-white pt-20 mt-20">
 
       {/* TOP CTA – Câu hỏi cảm xúc */}
       <div className="text-center px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-          Bạn đã sẵn sàng <span className="text-emerald-400">trải nghiệm Ninh Bình</span> chưa?
+          {t("footer.cta_title")}
         </h2>
 
         <p className="text-gray-300 max-w-2xl mx-auto mt-4">
-          Hãy để chúng tôi giúp bạn khám phá Tràng An, Hang Múa, Tam Cốc và những di sản tuyệt đẹp theo cách trọn vẹn nhất.
+          {t("footer.cta_desc")}
         </p>
 
         <button className="mt-6 px-8 py-4 bg-emerald-500 hover:bg-emerald-600 rounded-full text-lg font-semibold shadow-xl transition-all">
-          Bắt đầu hành trình của bạn →
+          {t("footer.cta_button")}
         </button>
       </div>
 
@@ -24,41 +27,41 @@ export default function FooterNinhBinh() {
 
         {/* Brand */}
         <div>
-          <h3 className="text-2xl font-bold">NinhBinh Travel</h3>
+          <h3 className="text-2xl font-bold">{t("footer.brand_title")}</h3>
           <p className="text-gray-400 mt-3 leading-relaxed">
-            Khám phá vẻ đẹp của cố đô Hoa Lư với các tour tận hưởng thiên nhiên, văn hóa và ẩm thực.
+            {t("footer.brand_desc")}
           </p>
         </div>
 
         {/* Menu */}
         <div>
-          <h4 className="font-semibold text-lg mb-4">Khám phá</h4>
+          <h4 className="font-semibold text-lg mb-4">{t("footer.explore")}</h4>
           <ul className="space-y-3 text-gray-300">
-            <li className="hover:text-emerald-400 cursor-pointer">Trang chủ</li>
-            <li className="hover:text-emerald-400 cursor-pointer">Tour Ninh Bình</li>
-            <li className="hover:text-emerald-400 cursor-pointer">Điểm đến nổi bật</li>
-            <li className="hover:text-emerald-400 cursor-pointer">Blog du lịch</li>
+            <li className="hover:text-emerald-400 cursor-pointer">{t("footer.explore_items.home")}</li>
+            <li className="hover:text-emerald-400 cursor-pointer">{t("footer.explore_items.tours")}</li>
+            <li className="hover:text-emerald-400 cursor-pointer">{t("footer.explore_items.highlights")}</li>
+            <li className="hover:text-emerald-400 cursor-pointer">{t("footer.explore_items.blog")}</li>
           </ul>
         </div>
 
         {/* Support */}
         <div>
-          <h4 className="font-semibold text-lg mb-4">Hỗ trợ</h4>
+          <h4 className="font-semibold text-lg mb-4">{t("footer.support")}</h4>
           <ul className="space-y-3 text-gray-300">
-            <li className="hover:text-emerald-400 cursor-pointer">Câu hỏi thường gặp</li>
-            <li className="hover:text-emerald-400 cursor-pointer">Chính sách hoàn hủy</li>
-            <li className="hover:text-emerald-400 cursor-pointer">Liên hệ tư vấn</li>
-            <li className="hover:text-emerald-400 cursor-pointer">Hỗ trợ khách hàng</li>
+            <li className="hover:text-emerald-400 cursor-pointer">{t("footer.support_items.faq")}</li>
+            <li className="hover:text-emerald-400 cursor-pointer">{t("footer.support_items.policy")}</li>
+            <li className="hover:text-emerald-400 cursor-pointer">{t("footer.support_items.contact")}</li>
+            <li className="hover:text-emerald-400 cursor-pointer">{t("footer.support_items.helpdesk")}</li>
           </ul>
         </div>
 
         {/* Contact */}
         <div>
-          <h4 className="font-semibold text-lg mb-4">Thông tin liên hệ</h4>
+          <h4 className="font-semibold text-lg mb-4">{t("footer.contact")}</h4>
           <ul className="space-y-3 text-gray-300">
-            <li>📍 Ninh Bình, Việt Nam</li>
-            <li>📞 0987 654 321</li>
-            <li>✉️ contact@ninhbinhtravel.vn</li>
+            <li>{t("footer.contact_items.address")}</li>
+            <li>{t("footer.contact_items.phone")}</li>
+            <li>{t("footer.contact_items.email")}</li>
           </ul>
         </div>
       </div>
@@ -67,7 +70,7 @@ export default function FooterNinhBinh() {
       <div className="border-t border-white/10 py-6 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-4">
 
         <p className="text-gray-400 text-sm">
-          © 2025 NinhBinh Travel. Tất cả quyền được bảo lưu.
+          {t("footer.copyright")}
         </p>
 
         {/* Social (SVG handmade – không dùng react-icons) */}

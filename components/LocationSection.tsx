@@ -4,8 +4,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { MapPin, Navigation, Clock, Phone } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function LocationSection() {
+  const { t } = useTranslation("common");
   return (
     <section className="py-24 lg:py-15 bg-gradient-to-br from-cyan-50 via-white to-teal-50 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
@@ -19,10 +21,10 @@ export default function LocationSection() {
         >
 
           <h2 className="mt-8 text-5xl lg:text-7xl font-black tracking-tight bg-gradient-to-r from-cyan-600 via-teal-600 to-emerald-700 bg-clip-text text-transparent">
-            VỊ TRÍ ĐỊA LÝ
+            {t("location.title")}
           </h2>
           <p className="mt-6 text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto font-light leading-relaxed">
-            Điểm cất cánh đẹp nhất TP.HCM – View triệu đô hướng sông Sài Gòn & Landmark 81
+            {t("location.subtitle")}
           </p>
         </motion.div>
 
@@ -48,8 +50,8 @@ export default function LocationSection() {
                   <MapPin className="w-10 h-10 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-3xl lg:text-4xl font-black text-gray-900">ĐIỂM CẤT CÁNH</h3>
-                  <p className="text-cyan-600 font-bold text-lg">TP. HỒ CHÍ MINH</p>
+                  <h3 className="text-3xl lg:text-4xl font-black text-gray-900">{t("location.card.title")}</h3>
+                  <p className="text-cyan-600 font-bold text-lg">{t("location.card.city")}</p>
                 </div>
               </div>
 
@@ -57,23 +59,23 @@ export default function LocationSection() {
                 <div className="flex items-start gap-5">
                   <Navigation className="w-7 h-7 text-cyan-600 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-bold text-xl text-gray-900">Địa chỉ chính xác:</p>
+                    <p className="font-bold text-xl text-gray-900">{t("location.address.label")}</p>
                     <p className="text-lg leading-relaxed mt-2">
-                      <strong>Số 10 đường T</strong><br />
-                      Khu đô thị Lakeview City, Phường An Phú<br />
-                      TP. Thủ Đức, TP. Hồ Chí Minh
+                      {t("location.address.content").split("\n").map((line: string, i: number) => (
+                        <span key={i}>{line}<br /></span>
+                      ))}
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-5">
                   <Clock className="w-7 h-7 text-emerald-600" />
-                  <p className="text-lg"><span className="font-bold">Giờ bay:</span> 06:00 – 18:00 hàng ngày</p>
+                  <p className="text-lg"><span className="font-bold">{t("location.hours.label")}</span> {t("location.hours.value")}</p>
                 </div>
 
                 <div className="flex items-center gap-5">
                   <Phone className="w-7 h-7 text-teal-600" />
-                  <p className="text-lg"><span className="font-bold">Hotline:</span> 090 123 4567</p>
+                  <p className="text-lg"><span className="font-bold">{t("location.hotline.label")}</span> {t("location.hotline.number")}</p>
                 </div>
               </div>
 
@@ -86,7 +88,7 @@ export default function LocationSection() {
                 className="mt-12 inline-flex items-center gap-4 px-10 py-6 bg-gradient-to-r from-cyan-600 to-teal-600 text-white font-bold text-xl rounded-2xl shadow-2xl hover:shadow-cyan-500/60 transition-all duration-300"
               >
                 <Navigation className="w-7 h-7" />
-                Xem đường đi ngay
+                {t("location.map.button")}
               </motion.a>
             </motion.div>
           </motion.div>
@@ -115,7 +117,7 @@ export default function LocationSection() {
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur px-8 py-4 rounded-full shadow-2xl flex items-center gap-4">
               <div className="w-4 h-4 bg-red-500 rounded-full animate-ping" />
               <div className="w-4 h-4 bg-red-500 rounded-full absolute" />
-              <span className="font-bold text-gray-800 text-lg">Đang hoạt động</span>
+              <span className="font-bold text-gray-800 text-lg">{t("location.status")}</span>
             </div>
           </motion.div>
 
@@ -137,10 +139,10 @@ export default function LocationSection() {
       className="text-center mb-20"
     >
       <h2 className="text-4xl lg:text-6xl font-black tracking-tight bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
-        HÀNH TRÌNH BAY CỦA BẠN
+        {t("location.timeline.title")}
       </h2>
       <p className="text-gray-600 text-xl mt-4 max-w-3xl mx-auto">
-        Quy trình bay chuẩn quốc tế – an toàn, bài bản và mượt mà.
+        {t("location.timeline.subtitle")}
       </p>
     </motion.div>
 
@@ -173,7 +175,7 @@ export default function LocationSection() {
         ">
           <p className="absolute -top-10 left-1/2 -translate-x-1/2 
             text-sm font-bold text-cyan-700 tracking-wider hidden md:block">
-            CHUẨN BỊ
+            {t("location.timeline.steps.0.label")}
           </p>
 
           <motion.div
@@ -187,9 +189,9 @@ export default function LocationSection() {
               flex items-center justify-center shadow-lg">
               <MapPin className="w-8 h-8" />
             </div>
-            <h3 className="font-bold text-xl mt-5">Bước 1</h3>
+            <h3 className="font-bold text-xl mt-5">{t("location.timeline.steps.0.title")}</h3>
             <p className="mt-3 text-gray-600 leading-relaxed">
-              Nhận briefing an toàn và hướng dẫn bay.
+              {t("location.timeline.steps.0.desc")}
             </p>
           </motion.div>
 
@@ -211,7 +213,7 @@ export default function LocationSection() {
         ">
           <p className="absolute -top-10 left-1/2 -translate-x-1/2 
             text-sm font-bold text-teal-700 tracking-wider hidden md:block">
-            TRANG BỊ
+            {t("location.timeline.steps.1.label")}
           </p>
 
           <motion.div
@@ -225,9 +227,9 @@ export default function LocationSection() {
               flex items-center justify-center shadow-lg">
               <Navigation className="w-8 h-8" />
             </div>
-            <h3 className="font-bold text-xl mt-5">Bước 2</h3>
+            <h3 className="font-bold text-xl mt-5">{t("location.timeline.steps.1.title")}</h3>
             <p className="mt-3 text-gray-600 leading-relaxed">
-              Trang bị đầy đủ bảo hộ chuyên dụng.
+              {t("location.timeline.steps.1.desc")}
             </p>
           </motion.div>
 
@@ -244,7 +246,7 @@ export default function LocationSection() {
         <div className="relative text-center md:-mt-12 mt-10">
           <p className="absolute -top-10 left-1/2 -translate-x-1/2 
             text-sm font-bold text-emerald-700 tracking-wider hidden md:block">
-            KIỂM TRA
+            {t("location.timeline.steps.2.label")}
           </p>
 
           <motion.div
@@ -258,9 +260,9 @@ export default function LocationSection() {
               flex items-center justify-center shadow-lg">
               <Clock className="w-8 h-8" />
             </div>
-            <h3 className="font-bold text-xl mt-5">Bước 3</h3>
+            <h3 className="font-bold text-xl mt-5">{t("location.timeline.steps.2.title")}</h3>
             <p className="mt-3 text-gray-600 leading-relaxed">
-              Tiếp cận bãi cất cánh và kiểm tra lần cuối.
+              {t("location.timeline.steps.2.desc")}
             </p>
           </motion.div>
 
@@ -277,7 +279,7 @@ export default function LocationSection() {
         <div className="relative text-center md:mt-12 mt-10">
           <p className="absolute -top-10 left-1/2 -translate-x-1/2 
             text-sm font-bold text-teal-700 tracking-wider hidden md:block">
-            CẤT CÁNH
+            {t("location.timeline.steps.3.label")}
           </p>
 
           <motion.div
@@ -291,9 +293,9 @@ export default function LocationSection() {
               flex items-center justify-center shadow-lg">
               <Navigation className="w-8 h-8" />
             </div>
-            <h3 className="font-bold text-xl mt-5">Bước 4</h3>
+            <h3 className="font-bold text-xl mt-5">{t("location.timeline.steps.3.title")}</h3>
             <p className="mt-3 text-gray-600 leading-relaxed">
-              Cất cánh – trải nghiệm bay tự do.
+              {t("location.timeline.steps.3.desc")}
             </p>
           </motion.div>
 
@@ -310,7 +312,7 @@ export default function LocationSection() {
         <div className="relative text-center md:-mt-12 mt-10">
           <p className="absolute -top-10 left-1/2 -translate-x-1/2 
             text-sm font-bold text-cyan-700 tracking-wider hidden md:block">
-            HẠ CÁNH
+            {t("location.timeline.steps.4.label")}
           </p>
 
           <motion.div
@@ -324,9 +326,9 @@ export default function LocationSection() {
               flex items-center justify-center shadow-lg">
               <Phone className="w-8 h-8" />
             </div>
-            <h3 className="font-bold text-xl mt-5">Bước 5</h3>
+            <h3 className="font-bold text-xl mt-5">{t("location.timeline.steps.4.title")}</h3>
             <p className="mt-3 text-gray-600 leading-relaxed">
-              Hạ cánh an toàn & kết thúc hành trình.
+              {t("location.timeline.steps.4.desc")}
             </p>
           </motion.div>
 

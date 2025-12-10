@@ -9,8 +9,10 @@ import { ChevronDown, Menu, X } from "lucide-react";
 // import LanguageSwitcher from "./LanguageSwitcher";
 import { FaVolumeUp, FaVolumeMute } from "react-icons/fa";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 export default function HeroHeader() {
+  const { t } = useTranslation("common");
   const [scrolled, setScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -33,28 +35,28 @@ export default function HeroHeader() {
 
   // DỮ LIỆU ĐÃ ĐƯỢC DỊCH SANG TIẾNG ANH
   const menuData: Record<string, any[]> = {
-    "ĐẶT VÉ": [
+    booking: [
       { title: "40% OFF for groups of 6+", desc: "Super hot deal", img: "https://halongparagliding.com/wp-content/uploads/2025/11/z7260492120163_63794d4dbef5656cb23f058445ea2f69.jpg" },
       { title: "Tandem flight + Free 4K video", desc: "Professional drone filming", img: "https://halongparagliding.com/wp-content/uploads/2025/11/z7260492120163_63794d4dbef5656cb23f058445ea2f69.jpg" },
     ],
-    "SỰ KIỆN": [
+    events: [
       { title: "Morning flight", time: "06:00 – 10:00", price: "1.800.000₫" },
       { title: "Afternoon flight", time: "14:00 – 18:00", price: "2.200.000₫" },
       { title: "Sunset VIP", time: "17:30", price: "3.800.000₫", hot: true },
     ],
-    "HOI AN": ["Old Town", "Japanese Bridge", "Coconut Forest", "An Bang Beach", "Tra Que Village", "Thanh Ha Pottery"],
-    "DA NANG": ["Dragon Bridge", "Ba Na Hills", "My Khe Beach", "Marble Mountains", "Asia Park", "Love Bridge"],
+    hoi_an: ["Old Town", "Japanese Bridge", "Coconut Forest", "An Bang Beach", "Tra Que Village", "Thanh Ha Pottery"],
+    da_nang: ["Dragon Bridge", "Ba Na Hills", "My Khe Beach", "Marble Mountains", "Asia Park", "Love Bridge"],
   };
 
   // MENU CHÍNH – TIẾNG ANH
-  const navItems: string[] = [
-    "TRANG CHỦ",
-    "ĐẶT VÉ",
-    "SỰ KIỆN",
-    "DU LỊCH",
-    "ĐỐI TÁC",
-    "BLOG",
-    "CHUYẾN BAY"
+  const navItems: { key: string; label: string }[] = [
+    { key: "home", label: t("nav.home") },
+    { key: "booking", label: t("nav.booking") },
+    { key: "events", label: t("nav.events") },
+    { key: "travel", label: t("nav.travel") },
+    { key: "partners", label: t("nav.partners") },
+    { key: "blog", label: t("nav.blog") },
+    { key: "flight", label: t("nav.flight") },
   ];
 
   return (
@@ -114,9 +116,9 @@ export default function HeroHeader() {
           <nav className="hidden lg:flex items-center gap-4">
             {navItems.map((item) => (
               <div
-                key={item}
+                key={item.key}
                 className="relative"
-                onMouseEnter={() => menuData[item] && setActiveMenu(item)}
+                onMouseEnter={() => menuData[item.key] && setActiveMenu(item.key)}
                 onMouseLeave={() => setActiveMenu(null)}
               >
                 <motion.a
@@ -128,13 +130,13 @@ export default function HeroHeader() {
                   }`}
                   whileHover={{ y: -3 }}
                 >
-                  {item}
-                  {menuData[item] && <ChevronDown className="w-4 h-4" />}
+                  {item.label}
+                  {menuData[item.key] && <ChevronDown className="w-4 h-4" />}
                 </motion.a>
 
                 {/* DROPDOWN */}
                 <AnimatePresence>
-                  {menuData[item] && activeMenu === item && (
+                  {menuData[item.key] && activeMenu === item.key && (
                     <motion.div
                       initial={{ opacity: 0, y: 15 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -143,7 +145,7 @@ export default function HeroHeader() {
                     >
                       <div className="p-6">
                         {/* OFFERS */}
-                        {item === "ĐẶT VÉ" && menuData[item].map((x: any) => (
+                        {item.key === "booking" && menuData[item.key].map((x: any) => (
                           <div key={x.title} className="flex gap-4 mb-5 last:mb-0 group">
                             <div className="w-20 h-20 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
                               <Image src={x.img} alt={x.title} width={80} height={80} className="object-cover group-hover:scale-110 transition" />
@@ -156,7 +158,7 @@ export default function HeroHeader() {
                         ))}
 
                         {/* BOOK NOW */}
-                        {item === "SỰ KIỆN" && menuData[item].map((x: any) => (
+                        {item.key === "events" && menuData[item.key].map((x: any) => (
                           <div key={x.title} className="p-5 mb-4 last:mb-0 bg-gradient-to-r from-cyan-50 to-blue-50 rounded-xl border border-cyan-100">
                             <div className="flex justify-between items-center">
                               <div>
@@ -172,9 +174,9 @@ export default function HeroHeader() {
                         ))}
 
                         {/* HỘI AN & ĐÀ NẴNG */}
-                        {(item === "HOI AN" || item === "DA NANG") && (
+                        {(item.key === "hoi_an" || item.key === "da_nang") && (
                           <div className="grid grid-cols-2 gap-3">
-                            {menuData[item].map((place: string) => (
+                            {menuData[item.key].map((place: string) => (
                               <div key={place} className="py-3 text-center rounded-lg hover:bg-cyan-50 font-medium text-gray-700 cursor-pointer transition">
                                 {place}
                               </div>
@@ -251,18 +253,18 @@ export default function HeroHeader() {
                 </button>
 
                 {navItems.map((item) => (
-                  <div key={item} className="border-b border-gray-200 last:border-0">
+                  <div key={item.key} className="border-b border-gray-200 last:border-0">
                     <button
-                      onClick={() => setOpenMobileItem(openMobileItem === item ? null : item)}
+                      onClick={() => setOpenMobileItem(openMobileItem === item.key ? null : item.key)}
                       className={`w-full py-5 flex justify-between items-center text-left uppercase tracking-wider font-['Roboto_Condensed'] text-base ${
-                        item === "HOME" ? "text-cyan-600 font-bold" : "text-gray-800"
+                        item.key === "home" ? "text-cyan-600 font-bold" : "text-gray-800"
                       }`}
                     >
-                      {item}
-                      {menuData[item] && (
+                      {item.label}
+                      {menuData[item.key] && (
                         <ChevronDown
                           className={`w-5 h-5 transition-transform duration-300 ${
-                            openMobileItem === item ? "rotate-180" : ""
+                            openMobileItem === item.key ? "rotate-180" : ""
                           }`}
                         />
                       )}
@@ -270,7 +272,7 @@ export default function HeroHeader() {
 
                     {/* Mobile submenu – đã dịch tiếng Anh */}
                     <AnimatePresence>
-                      {menuData[item] && openMobileItem === item && (
+                      {menuData[item.key] && openMobileItem === item.key && (
                         <motion.div
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
@@ -278,7 +280,7 @@ export default function HeroHeader() {
                           className="overflow-hidden pb-4"
                         >
                           <div className="pl-6 space-y-4">
-                            {item === "SỰ KIỆN" && menuData[item].map((x: any) => (
+                            {item.key === "events" && menuData[item.key].map((x: any) => (
                               <div key={x.title} className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-lg p-4">
                                 <p className="font-bold text-gray-900">{x.title} {x.hot && "HOT"}</p>
                                 <p className="text-sm text-gray-600">{x.time}</p>
@@ -286,14 +288,14 @@ export default function HeroHeader() {
                               </div>
                             ))}
 
-                            {item === "ĐẶT VÉ" && menuData[item].map((x: any) => (
+                            {item.key === "booking" && menuData[item.key].map((x: any) => (
                               <div key={x.title}>
                                 <p className="font-semibold text-gray-800">{x.title}</p>
                                 <p className="text-sm text-gray-600">{x.desc}</p>
                               </div>
                             ))}
 
-                            {(item === "HOI AN" || item === "DA NANG") && menuData[item].map((place: string) => (
+                            {(item.key === "hoi_an" || item.key === "da_nang") && menuData[item.key].map((place: string) => (
                               <p key={place} className="text-gray-700 py-1">• {place}</p>
                             ))}
                           </div>

@@ -3,38 +3,32 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import type { TFunction } from "i18next";
 
-const news = [
-  {
-    tag: "NINH BINH",
-    title: "Khám phá Tràng An – Di sản văn hóa & thiên nhiên thế giới",
-    date: "05 THÁNG 12 2025",
-    image:
-      "https://res.klook.com/image/upload/c_crop,h_1187,w_1899,x_1,y_92,z_0.4/w_750,h_469,c_fill,q_85/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/go7r5rtj3qxexkbodyhf.jpg",
-  },
-  {
-    tag: "DU LỊCH",
-    title: "Chinh phục Hang Múa – Nơi ngắm toàn cảnh Tam Cốc đẹp nhất",
-    date: "20 THÁNG 11 2025",
-    image:
-      "https://onevivu.vn/wp-content/uploads/2020/10/Hang-Mua-Ninh-Binh-7.jpg",
-  },
-  {
-    tag: "TRẢI NGHIỆM",
-    title: "Tam Cốc mùa lúa chín – Vẻ đẹp vàng rực hiếm nơi nào có",
-    date: "10 THÁNG 12 2025",
-    image:
-      "https://cdn3.ivivu.com/2016/06/tam-coc-mua-lua-chin-ivivu-2.jpg",
-  },
-];
+function getNewsData(t: TFunction) {
+  const images = [
+    "https://res.klook.com/image/upload/c_crop,h_1187,w_1899,x_1,y_92,z_0.4/w_750,h_469,c_fill,q_85/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/go7r5rtj3qxexkbodyhf.jpg",
+    "https://onevivu.vn/wp-content/uploads/2020/10/Hang-Mua-Ninh-Binh-7.jpg",
+    "https://cdn3.ivivu.com/2016/06/tam-coc-mua-lua-chin-ivivu-2.jpg",
+  ];
+  const localized = t("news.items", { returnObjects: true }) as Array<{
+    tag: string;
+    title: string;
+    date: string;
+  }>;
+  return localized.map((n, i) => ({ ...n, image: images[i] }));
+}
 
 
 export default function NewsCards() {
+  const { t } = useTranslation("common");
+  const news = getNewsData(t);
   return (
     <section className="py-20 lg:py-32 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
         <h2 className="text-center text-5xl lg:text-6xl font-black bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-20">
-          TIN TỨC & SỰ KIỆN
+          {t("news.section_title")}
         </h2>
 
         <div className="grid md:grid-cols-3 gap-12 lg:gap-20 max-w-7xl mx-auto relative">
