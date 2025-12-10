@@ -1,0 +1,9 @@
+/* app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Đảm bảo font áp dụng toàn bộ (dự phòng) */
+html, body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
