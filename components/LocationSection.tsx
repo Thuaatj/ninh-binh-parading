@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 export default function LocationSection() {
   const { t } = useTranslation("common");
   return (
-    <section className="py-24 lg:py-15 bg-gradient-to-br from-cyan-50 via-white to-teal-50 overflow-hidden">
+    <section className="py-0 lg:py-15 bg-gradient-to-br from-cyan-50 via-white to-teal-50 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
         {/* TIÊU ĐỀ + ẢNH 3D ĐẸP PHÁT KHÓC */}
         <motion.div
@@ -80,7 +80,7 @@ export default function LocationSection() {
               </div>
 
               <motion.a
-                href="https://maps.app.goo.gl/YourRealGoogleMapsLinkHere" // Thay link thật của bạn vào đây
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.297926958594!2d105.9418685!3d20.2769872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313679003e1af52b%3A0xb614cdf238156678!2sD%C3%B9%20L%C6%B0%E1%BB%A3n%20%7C%20Paragliding%20%7C%20Paramotor%20Ninh%20Binh%20-%20Landing!5e0!3m2!1svi!2s!4v1733922900000!5m2!1svi!2s" // Thay link thật của bạn vào đây
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -103,7 +103,7 @@ export default function LocationSection() {
           >
             <div className="rounded-3xl overflow-hidden shadow-2xl border-12 border-white">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8892!2d106.735455!3d10.801234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294e2f7b0f1d%3A0x8f3e8f8f8f8f8f8f!2s10+%C4%90%C6%B0%E1%BB%9Dng+T%2C+Lakeview+City%2C+An+Ph%C3%BA%2C+Th%E1%BB%A7+%C4%90%E1%BB%A9c%2C+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh!5e0!3m2!1svi!2s!4v1736350000000"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.297926958594!2d105.9418685!3d20.2769872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313679003e1af52b%3A0xb614cdf238156678!2sD%C3%B9%20L%C6%B0%E1%BB%A3n%20%7C%20Paragliding%20%7C%20Paramotor%20Ninh%20Binh%20-%20Landing!5e0!3m2!1svi!2s!4v1733922900000!5m2!1svi!2s"
                 width="100%"
                 height="560"
                 style={{ border: 0 }}
@@ -128,223 +128,223 @@ export default function LocationSection() {
 
       </div>
      <section className="py-28 bg-gradient-to-b from-white to-cyan-70 overflow-hidden">
-  <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
+        <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
 
-    {/* TITLE */}
-    <motion.div
-      initial={{ opacity: 0, y: 60 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 1 }}
-      className="text-center mb-20"
-    >
-      <h2 className="text-4xl lg:text-6xl font-black tracking-tight bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
-        {t("location.timeline.title")}
-      </h2>
-      <p className="text-gray-600 text-xl mt-4 max-w-3xl mx-auto">
-        {t("location.timeline.subtitle")}
-      </p>
-    </motion.div>
-
-    {/* TIMELINE */}
-    <div className="relative w-full flex items-center justify-between">
-
-      {/* DESKTOP LINE */}
-      <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r 
-        from-cyan-300 via-teal-400 to-emerald-400 rounded-full 
-        hidden md:block" />
-
-      {/* STEPS */}
-      <div
-        className="
-          relative 
-          grid 
-          grid-cols-1      /* mobile */
-          sm:grid-cols-2   /* tablet nhỏ */
-          md:grid-cols-5   /* desktop */
-          gap-16 sm:gap-20 md:gap-12 
-          w-full 
-          md:top-20
-        "
-      >
-
-        {/* STEP 1 */}
-        <div className="relative text-center 
-          md:-mt-12      /* desktop */
-          mt-10          /* mobile */
-        ">
-          <p className="absolute -top-10 left-1/2 -translate-x-1/2 
-            text-sm font-bold text-cyan-700 tracking-wider hidden md:block">
-            {t("location.timeline.steps.0.label")}
-          </p>
-
+          {/* TITLE */}
           <motion.div
-            whileHover={{ y: -10, scale: 1.02 }}
-            transition={{ duration: 0.4 }}
-            className="bg-white rounded-3xl p-8 shadow-xl 
-              border border-cyan-100 hover:shadow-cyan-300/40 
-              max-w-[350px] mx-auto"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="text-center mb-20"
           >
-            <div className="w-16 h-16 mx-auto bg-cyan-500 text-white rounded-2xl
-              flex items-center justify-center shadow-lg">
-              <MapPin className="w-8 h-8" />
-            </div>
-            <h3 className="font-bold text-xl mt-5">{t("location.timeline.steps.0.title")}</h3>
-            <p className="mt-3 text-gray-600 leading-relaxed">
-              {t("location.timeline.steps.0.desc")}
+            <h2 className="text-4xl lg:text-6xl font-black tracking-tight bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
+              {t("location.timeline.title")}
+            </h2>
+            <p className="text-gray-600 text-xl mt-4 max-w-3xl mx-auto">
+              {t("location.timeline.subtitle")}
             </p>
           </motion.div>
 
-          {/* DOT DESKTOP */}
-          <div className="hidden md:block absolute left-1/2 -translate-x-1/2 
-            top-full mt-3 w-5 h-5 bg-cyan-500 rounded-full shadow-lg" />
+          {/* TIMELINE */}
+          <div className="relative w-full flex items-center justify-between">
 
-          {/* MOBILE LINE */}
-          <div className="md:hidden flex flex-col items-center mt-6">
-            <div className="w-4 h-4 bg-cyan-500 rounded-full mb-2" />
-            <div className="w-1 h-12 bg-cyan-300 rounded-full" />
-          </div>
-        </div>
+            {/* DESKTOP LINE */}
+            <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r 
+              from-cyan-300 via-teal-400 to-emerald-400 rounded-full 
+              hidden md:block" />
 
-        {/* STEP 2 */}
-        <div className="relative text-center 
-          md:mt-12 
-          mt-10
-        ">
-          <p className="absolute -top-10 left-1/2 -translate-x-1/2 
-            text-sm font-bold text-teal-700 tracking-wider hidden md:block">
-            {t("location.timeline.steps.1.label")}
-          </p>
+            {/* STEPS */}
+            <div
+              className="
+                relative 
+                grid 
+                grid-cols-1      /* mobile */
+                sm:grid-cols-2   /* tablet nhỏ */
+                md:grid-cols-5   /* desktop */
+                gap-10 sm:gap-4 md:gap-12 -space-y-8 md:space-y-0
+                w-full 
+                md:top-20
+              "
+            >
 
-          <motion.div
-            whileHover={{ y: -10, scale: 1.02 }}
-            transition={{ duration: 0.4 }}
-            className="bg-white rounded-3xl p-8 shadow-xl 
-              border border-cyan-100 hover:shadow-cyan-300/40 
-              max-w-[350px] mx-auto"
-          >
-            <div className="w-16 h-16 mx-auto bg-teal-500 text-white rounded-2xl 
-              flex items-center justify-center shadow-lg">
-              <Navigation className="w-8 h-8" />
+              {/* STEP 1 */}
+              <div className="relative text-center 
+                md:-mt-12      /* desktop */
+                mt-10          /* mobile */
+              ">
+                <p className="absolute -top-10 left-1/2 -translate-x-1/2 
+                  text-sm font-bold text-cyan-700 tracking-wider hidden md:block">
+                  {t("location.timeline.steps.0.label")}
+                </p>
+
+                <motion.div
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  transition={{ duration: 0.4 }}
+                  className="bg-white rounded-3xl p-8 shadow-xl 
+                    border border-cyan-100 hover:shadow-cyan-300/40 
+                    max-w-[350px] mx-auto"
+                >
+                  <div className="w-16 h-16 mx-auto bg-cyan-500 text-white rounded-2xl
+                    flex items-center justify-center shadow-lg">
+                    <MapPin className="w-8 h-8" />
+                  </div>
+                  <h3 className="font-bold text-xl mt-5">{t("location.timeline.steps.0.title")}</h3>
+                  <p className="mt-3 text-gray-600 leading-relaxed">
+                    {t("location.timeline.steps.0.desc")}
+                  </p>
+                </motion.div>
+
+                {/* DOT DESKTOP */}
+                <div className="hidden md:block absolute left-1/2 -translate-x-1/2 
+                  top-full mt-3 w-5 h-5 bg-cyan-500 rounded-full shadow-lg" />
+
+                {/* MOBILE LINE */}
+                <div className="md:hidden flex flex-col items-center mt-6">
+                  <div className="w-4 h-4 bg-cyan-500 rounded-full mb-2" />
+                  <div className="w-1 h-12 bg-cyan-300 rounded-full" />
+                </div>
+              </div>
+
+              {/* STEP 2 */}
+              <div className="relative text-center 
+                md:mt-12 
+                mt-10
+              ">
+                <p className="absolute -top-10 left-1/2 -translate-x-1/2 
+                  text-sm font-bold text-teal-700 tracking-wider hidden md:block">
+                  {t("location.timeline.steps.1.label")}
+                </p>
+
+                <motion.div
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  transition={{ duration: 0.4 }}
+                  className="bg-white rounded-3xl p-8 shadow-xl 
+                    border border-cyan-100 hover:shadow-cyan-300/40 
+                    max-w-[350px] mx-auto"
+                >
+                  <div className="w-16 h-16 mx-auto bg-teal-500 text-white rounded-2xl 
+                    flex items-center justify-center shadow-lg">
+                    <Navigation className="w-8 h-8" />
+                  </div>
+                  <h3 className="font-bold text-xl mt-5">{t("location.timeline.steps.1.title")}</h3>
+                  <p className="mt-3 text-gray-600 leading-relaxed">
+                    {t("location.timeline.steps.1.desc")}
+                  </p>
+                </motion.div>
+
+                <div className="hidden md:block absolute left-1/2 -translate-x-1/2 
+                  -top-6 w-5 h-5 bg-teal-500 rounded-full shadow-lg" />
+
+                <div className="md:hidden flex flex-col items-center mt-6">
+                  <div className="w-4 h-4 bg-teal-500 rounded-full mb-2" />
+                  <div className="w-1 h-12 bg-teal-300 rounded-full" />
+                </div>
+              </div>
+
+              {/* STEP 3 */}
+              <div className="relative text-center md:-mt-12 mt-10">
+                <p className="absolute -top-10 left-1/2 -translate-x-1/2 
+                  text-sm font-bold text-emerald-700 tracking-wider hidden md:block">
+                  {t("location.timeline.steps.2.label")}
+                </p>
+
+                <motion.div
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  transition={{ duration: 0.4 }}
+                  className="bg-white rounded-3xl p-8 shadow-xl 
+                    border border-cyan-100 hover:shadow-cyan-300/40 
+                    max-w-[350px] mx-auto"
+                >
+                  <div className="w-16 h-16 mx-auto bg-emerald-500 text-white rounded-2xl 
+                    flex items-center justify-center shadow-lg">
+                    <Clock className="w-8 h-8" />
+                  </div>
+                  <h3 className="font-bold text-xl mt-5">{t("location.timeline.steps.2.title")}</h3>
+                  <p className="mt-3 text-gray-600 leading-relaxed">
+                    {t("location.timeline.steps.2.desc")}
+                  </p>
+                </motion.div>
+
+                <div className="hidden md:block absolute left-1/2 -translate-x-1/2 
+                  top-full mt-3 w-5 h-5 bg-emerald-500 rounded-full shadow-lg" />
+
+                <div className="md:hidden flex flex-col items-center mt-6">
+                  <div className="w-4 h-4 bg-emerald-500 rounded-full mb-2" />
+                  <div className="w-1 h-12 bg-emerald-300 rounded-full" />
+                </div>
+              </div>
+
+              {/* STEP 4 */}
+              <div className="relative text-center md:mt-12 mt-10">
+                <p className="absolute -top-10 left-1/2 -translate-x-1/2 
+                  text-sm font-bold text-teal-700 tracking-wider hidden md:block">
+                  {t("location.timeline.steps.3.label")}
+                </p>
+
+                <motion.div
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  transition={{ duration: 0.4 }}
+                  className="bg-white rounded-3xl p-8 shadow-xl 
+                    border border-cyan-100 hover:shadow-cyan-300/40 
+                    max-w-[350px] mx-auto"
+                >
+                  <div className="w-16 h-16 mx-auto bg-teal-500 text-white rounded-2xl 
+                    flex items-center justify-center shadow-lg">
+                    <Navigation className="w-8 h-8" />
+                  </div>
+                  <h3 className="font-bold text-xl mt-5">{t("location.timeline.steps.3.title")}</h3>
+                  <p className="mt-3 text-gray-600 leading-relaxed">
+                    {t("location.timeline.steps.3.desc")}
+                  </p>
+                </motion.div>
+
+                <div className="hidden md:block absolute left-1/2 -translate-x-1/2 
+                  -top-6 w-5 h-5 bg-teal-500 rounded-full shadow-lg" />
+
+                <div className="md:hidden flex flex-col items-center mt-6">
+                  <div className="w-4 h-4 bg-teal-500 rounded-full mb-2" />
+                  <div className="w-1 h-12 bg-teal-300 rounded-full" />
+                </div>
+              </div>
+
+              {/* STEP 5 */}
+              <div className="relative text-center md:-mt-12 mt-10">
+                <p className="absolute -top-10 left-1/2 -translate-x-1/2 
+                  text-sm font-bold text-cyan-700 tracking-wider hidden md:block">
+                  {t("location.timeline.steps.4.label")}
+                </p>
+
+                <motion.div
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  transition={{ duration: 0.4 }}
+                  className="bg-white rounded-3xl p-8 shadow-xl 
+                    border border-cyan-100 hover:shadow-cyan-300/40 
+                    max-w-[350px] mx-auto"
+                >
+                  <div className="w-16 h-16 mx-auto bg-cyan-500 text-white rounded-2xl 
+                    flex items-center justify-center shadow-lg">
+                    <Phone className="w-8 h-8" />
+                  </div>
+                  <h3 className="font-bold text-xl mt-5">{t("location.timeline.steps.4.title")}</h3>
+                  <p className="mt-3 text-gray-600 leading-relaxed">
+                    {t("location.timeline.steps.4.desc")}
+                  </p>
+                </motion.div>
+
+                <div className="hidden md:block absolute left-1/2 -translate-x-1/2 
+                  top-full mt-3 w-5 h-5 bg-cyan-500 rounded-full shadow-lg" />
+
+                <div className="md:hidden flex flex-col items-center mt-6">
+                  <div className="w-4 h-4 bg-cyan-500 rounded-full mb-2" />
+                  <div className="w-1 h-12 bg-cyan-300 rounded-full" />
+                </div>
+              </div>
+
             </div>
-            <h3 className="font-bold text-xl mt-5">{t("location.timeline.steps.1.title")}</h3>
-            <p className="mt-3 text-gray-600 leading-relaxed">
-              {t("location.timeline.steps.1.desc")}
-            </p>
-          </motion.div>
-
-          <div className="hidden md:block absolute left-1/2 -translate-x-1/2 
-            -top-6 w-5 h-5 bg-teal-500 rounded-full shadow-lg" />
-
-          <div className="md:hidden flex flex-col items-center mt-6">
-            <div className="w-4 h-4 bg-teal-500 rounded-full mb-2" />
-            <div className="w-1 h-12 bg-teal-300 rounded-full" />
           </div>
         </div>
-
-        {/* STEP 3 */}
-        <div className="relative text-center md:-mt-12 mt-10">
-          <p className="absolute -top-10 left-1/2 -translate-x-1/2 
-            text-sm font-bold text-emerald-700 tracking-wider hidden md:block">
-            {t("location.timeline.steps.2.label")}
-          </p>
-
-          <motion.div
-            whileHover={{ y: -10, scale: 1.02 }}
-            transition={{ duration: 0.4 }}
-            className="bg-white rounded-3xl p-8 shadow-xl 
-              border border-cyan-100 hover:shadow-cyan-300/40 
-              max-w-[350px] mx-auto"
-          >
-            <div className="w-16 h-16 mx-auto bg-emerald-500 text-white rounded-2xl 
-              flex items-center justify-center shadow-lg">
-              <Clock className="w-8 h-8" />
-            </div>
-            <h3 className="font-bold text-xl mt-5">{t("location.timeline.steps.2.title")}</h3>
-            <p className="mt-3 text-gray-600 leading-relaxed">
-              {t("location.timeline.steps.2.desc")}
-            </p>
-          </motion.div>
-
-          <div className="hidden md:block absolute left-1/2 -translate-x-1/2 
-            top-full mt-3 w-5 h-5 bg-emerald-500 rounded-full shadow-lg" />
-
-          <div className="md:hidden flex flex-col items-center mt-6">
-            <div className="w-4 h-4 bg-emerald-500 rounded-full mb-2" />
-            <div className="w-1 h-12 bg-emerald-300 rounded-full" />
-          </div>
-        </div>
-
-        {/* STEP 4 */}
-        <div className="relative text-center md:mt-12 mt-10">
-          <p className="absolute -top-10 left-1/2 -translate-x-1/2 
-            text-sm font-bold text-teal-700 tracking-wider hidden md:block">
-            {t("location.timeline.steps.3.label")}
-          </p>
-
-          <motion.div
-            whileHover={{ y: -10, scale: 1.02 }}
-            transition={{ duration: 0.4 }}
-            className="bg-white rounded-3xl p-8 shadow-xl 
-              border border-cyan-100 hover:shadow-cyan-300/40 
-              max-w-[350px] mx-auto"
-          >
-            <div className="w-16 h-16 mx-auto bg-teal-500 text-white rounded-2xl 
-              flex items-center justify-center shadow-lg">
-              <Navigation className="w-8 h-8" />
-            </div>
-            <h3 className="font-bold text-xl mt-5">{t("location.timeline.steps.3.title")}</h3>
-            <p className="mt-3 text-gray-600 leading-relaxed">
-              {t("location.timeline.steps.3.desc")}
-            </p>
-          </motion.div>
-
-          <div className="hidden md:block absolute left-1/2 -translate-x-1/2 
-            -top-6 w-5 h-5 bg-teal-500 rounded-full shadow-lg" />
-
-          <div className="md:hidden flex flex-col items-center mt-6">
-            <div className="w-4 h-4 bg-teal-500 rounded-full mb-2" />
-            <div className="w-1 h-12 bg-teal-300 rounded-full" />
-          </div>
-        </div>
-
-        {/* STEP 5 */}
-        <div className="relative text-center md:-mt-12 mt-10">
-          <p className="absolute -top-10 left-1/2 -translate-x-1/2 
-            text-sm font-bold text-cyan-700 tracking-wider hidden md:block">
-            {t("location.timeline.steps.4.label")}
-          </p>
-
-          <motion.div
-            whileHover={{ y: -10, scale: 1.02 }}
-            transition={{ duration: 0.4 }}
-            className="bg-white rounded-3xl p-8 shadow-xl 
-              border border-cyan-100 hover:shadow-cyan-300/40 
-              max-w-[350px] mx-auto"
-          >
-            <div className="w-16 h-16 mx-auto bg-cyan-500 text-white rounded-2xl 
-              flex items-center justify-center shadow-lg">
-              <Phone className="w-8 h-8" />
-            </div>
-            <h3 className="font-bold text-xl mt-5">{t("location.timeline.steps.4.title")}</h3>
-            <p className="mt-3 text-gray-600 leading-relaxed">
-              {t("location.timeline.steps.4.desc")}
-            </p>
-          </motion.div>
-
-          <div className="hidden md:block absolute left-1/2 -translate-x-1/2 
-            top-full mt-3 w-5 h-5 bg-cyan-500 rounded-full shadow-lg" />
-
-          <div className="md:hidden flex flex-col items-center mt-6">
-            <div className="w-4 h-4 bg-cyan-500 rounded-full mb-2" />
-            <div className="w-1 h-12 bg-cyan-300 rounded-full" />
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
     </section>
 

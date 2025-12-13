@@ -4,7 +4,7 @@ import "./globals.css";
 import I18nProvider from "../components/I18nProvider";
 
 export const metadata: Metadata = {
-  title: "Hoi An Paragliding",
+  title: "Ninh Binh Paragliding",
   description: "Fly once, remember forever",
 };
 

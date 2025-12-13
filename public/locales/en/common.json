@@ -9,11 +9,11 @@
     "flight": "FLIGHT"
   },
   "footer": {
-    "cta_title": "Ready to experience Ninh Binh?",
-    "cta_desc": "Let us help you explore Trang An, Hang Mua, Tam Coc and heritage sites the most complete way.",
-    "cta_button": "Start your journey →",
+    "cta_title": "Ready to experience Ninh Binh from the sky?",
+    "cta_desc": "Let us help you discover Trang An, Hang Mua, Tam Coc and the stunning heritage sites in the most complete and breathtaking way.",
+    "cta_button": "Start Your Journey →",
     "brand_title": "NinhBinh Travel",
-    "brand_desc": "Discover Hoa Lu ancient capital with tours embracing nature, culture and cuisine.",
+    "brand_desc": "Discover the beauty of the ancient capital Hoa Lu with tours that embrace nature, culture, and authentic cuisine.",
     "explore": "Explore",
     "explore_items": {
       "home": "Home",
@@ -24,11 +24,11 @@
     "support": "Support",
     "support_items": {
       "faq": "FAQ",
-      "policy": "Refund policy",
-      "contact": "Contact advisory",
-      "helpdesk": "Customer support"
+      "policy": "Cancellation Policy",
+      "contact": "Contact & Advisory",
+      "helpdesk": "Customer Support"
     },
-    "contact": "Contact information",
+    "contact": "Contact Information",
     "contact_items": {
       "address": "📍 Ninh Binh, Vietnam",
       "phone": "📞 +84 987 654 321",
@@ -38,54 +38,67 @@
   },
   "booking": {
     "title": "BOOKING PROCESS",
-    "desc": "Just 6 simple steps – ready to fly?",
+    "desc": "Just 6 simple steps – Are you ready to fly?",
     "steps": {
-      "contact": "Contact",
-      "contact_desc": "Chat with us",
-      "pick_date": "Pick flight date",
-      "pick_date_desc": "Choose a suitable time",
-      "pick_package": "Choose tour package",
-      "pick_package_desc": "See package details",
+      "contact": "Contact Us",
+      "contact_desc": "Chat with our team",
+      "pick_date": "Choose Flight Date",
+      "pick_date_desc": "Select your preferred time slot",
+      "pick_package": "Choose Tour Package",
+      "pick_package_desc": "View detailed itinerary",
       "payment": "Payment",
-      "payment_desc": "Safe & fast",
-      "ticket": "Get ticket",
-      "ticket_desc": "E-ticket via email",
-      "fly": "Fly high",
-      "fly_desc": "Amazing experience!"
+      "payment_desc": "Secure & instant",
+      "ticket": "Receive Ticket",
+      "ticket_desc": "E-ticket sent via email",
+      "fly": "Take to the Skies",
+      "fly_desc": "Unforgettable experience!"
     }
   },
-  "tours": {
-    "section_title": "TOUR PACKAGES",
-    "section_subtitle": "Unique experiences in Ha Long – glide above the clouds and save unforgettable moments...",
+    "tours": {
+    "section_title": "PARAGLIDING TOUR PACKAGES",
+    "section_subtitle": "Experience paragliding in Ninh Binh – glide between poetic rivers and majestic limestone mountains in a land where nature and heritage meet.",
     "highlights_label": "HIGHLIGHTS:",
     "button_book": "BOOK NOW",
+
+    "experience": {
+      "title": "A DAY AS A LOCAL FARMER",
+      "subtitle": "Become a true Ninh Binh local",
+      "main_desc": "Experience the peaceful rural life of Ninh Binh with authentic activities:",
+      "activities": "CYCLING - BUFFALO RIDING - DUCK HERDING",
+      "desc": "Live a full day like a real Ninh Binh farmer: cycling through golden rice fields, riding buffalo, herding ducks, harvesting vegetables, and enjoying a homemade countryside meal with locals.",
+      "photo_titles": [
+        "Cycling through endless rice fields",
+        "Riding buffalo like a real farmer",
+        "Herding ducks & countryside life"
+      ]
+    },
+    
     "items": [
       {
-        "title": "Awaken the Soul",
-        "desc": "Paragliding over Ha Long Bay, admire the world natural wonder.",
+        "title": "ANCIENT CAPITAL SPLENDOR (Standard Package)",
+        "desc": "A basic paragliding experience offering panoramic views – ideal for first-time flyers.",
         "highlights": [
-          "Ha Long Bay – UNESCO Heritage",
-          "Tuan Chau Island – Resort hub",
-          "Sung Sot Cave – Most beautiful cave",
-          "Cua Van Floating Village"
+          "Aerial view of the entire Trang An Heritage Complex.",
+          "Soar above the Ngo Dong River and Tam Coc rice fields.",
+          "Admire Hang Mua Peak from a stunning bird’s-eye perspective."
         ]
       },
       {
-        "title": "Kingdom of Light",
-        "desc": "Fly and enjoy stunning sunrise or sunset over Ha Long Bay.",
+        "title": "CHASING THE SUN (Sunrise / Sunset Package)",
+        "desc": "Golden-hour flights designed for photography lovers and those seeking romantic, cinematic moments.",
         "highlights": [
-          "Sunrise & Sunset over the Bay",
-          "Tuan Chau Island & Sung Sot Cave",
-          "Cua Van Floating Village"
+          "Capture sunrise clouds or breathtaking sunset skies over limestone mountains.",
+          "Mystical Trang An shimmering in soft morning or evening light.",
+          "Hang Mua Peak standing majestically against a sky full of colors."
         ]
       },
       {
-        "title": "Complete Journey",
-        "desc": "Full paragliding experience with the most beautiful viewpoints.",
+        "title": "LEGENDARY JOURNEY (VIP Package)",
+        "desc": "Our longest and most premium route – offering extended flight time and the most complete panorama of Ninh Binh.",
         "highlights": [
-          "Over Sung Sot Cave & fishing village",
-          "Bai Chay Bridge – Iconic",
-          "Bai Chay Beach"
+          "Longest and farthest flight duration available.",
+          "Admire the ancient beauty of Hoa Lu Citadel from above.",
+          "A sweeping view of all the iconic landscapes of Ninh Binh."
         ]
       }
     ]
@@ -95,31 +108,31 @@
     "items": [
       {
         "tag": "NINH BINH",
-        "title": "Explore Trang An – World cultural & natural heritage",
+        "title": "Cycling: Leisurely ride through small paths, breathing in the scent of rice and fresh breeze.",
         "date": "05 DECEMBER 2025"
       },
       {
         "tag": "TRAVEL",
-        "title": "Conquer Hang Mua – Best viewpoint over Tam Coc",
+        "title": "Buffalo Riding: Transform into a farmer and snap unique photos on a buffalo’s back.",
         "date": "20 NOVEMBER 2025"
       },
       {
         "tag": "EXPERIENCE",
-        "title": "Tam Coc in rice season – Mesmerizing golden beauty",
+        "title": "Duck Herding: Laugh out loud while chasing a flock of ducks across the ancient capital’s waterways.",
         "date": "10 DECEMBER 2025"
       }
     ]
   },
   "location": {
-    "title": "GEOGRAPHICAL LOCATION",
-    "subtitle": "Most beautiful takeoff spot in HCMC – Million-dollar view to Saigon River & Landmark 81",
+    "title": "TAKEOFF LOCATION",
+    "subtitle": "The best paragliding spots in Ninh Binh – Experience paragliding while admiring the beauty of the Ninh Binh heritage region.",
     "card": {
       "title": "TAKEOFF POINT",
-      "city": "HO CHI MINH CITY"
+      "city": "Ninh Binh"
     },
     "address": {
       "label": "Exact address:",
-      "content": "No. 10 T Street\nLakeview City, An Phu Ward\nThu Duc City, Ho Chi Minh City"
+      "content": "7WGR+QPX Opposite 368, Ninh Nhat, Hoa Lu, Ninh Binh"
     },
     "hours": {
       "label": "Flight hours:",
@@ -130,38 +143,38 @@
       "number": "+84 90 123 4567"
     },
     "map": {
-      "button": "View directions"
+      "button": "View Directions"
     },
-    "status": "Active",
+    "status": "Operational",
     "timeline": {
       "title": "YOUR FLIGHT JOURNEY",
-      "subtitle": "International-standard process – safe, methodical and smooth.",
+      "subtitle": "International-standard procedures – safe, professional, and seamless.",
       "steps": [
-        { "label": "PREPARE", "title": "Step 1", "desc": "Receive safety briefing and flight guidance." },
-        { "label": "GEAR UP", "title": "Step 2", "desc": "Equip full specialized protective gear." },
-        { "label": "CHECK", "title": "Step 3", "desc": "Approach takeoff area and final check." },
-        { "label": "TAKE OFF", "title": "Step 4", "desc": "Take off – enjoy free flight." },
-        { "label": "LAND", "title": "Step 5", "desc": "Land safely & end the journey." }
+        { "label": "BRIEFING", "title": "Step 1", "desc": "Receive safety briefing and flight instructions." },
+        { "label": "GEAR UP", "title": "Step 2", "desc": "Put on full professional safety equipment." },
+        { "label": "FINAL CHECK", "title": "Step 3", "desc": "Approach takeoff zone and perform final checks." },
+        { "label": "TAKEOFF", "title": "Step 4", "desc": "Lift off – enjoy the freedom of flight." },
+        { "label": "LANDING", "title": "Step 5", "desc": "Safe landing & journey complete." }
       ]
     }
   },
   "testimonials": {
-    "title": "CUSTOMERS SHARE",
-    "subtitle": "Over 12,000 flights • 100% want to return",
-    "watch_title": "See real flight customers",
-    "watch_subtitle": "Real emotions – Real journey – Real flight",
-    "video_note": "Video shot in real conditions in Da Lat • Pilots are internationally certified",
+    "title": "WHAT OUR GUESTS SAY",
+    "subtitle": "Over 12,000 flights • 100% want to fly again",
+    "watch_title": "Watch Real Guest Flights",
+    "watch_subtitle": "Real emotions – Real journeys – Real flights",
+    "video_note": "Footage recorded live in Da Lat • Pilots hold international certifications",
     "cta": {
       "top": "NOW IT'S",
       "bottom": "YOUR TURN"
     },
     "items": [
-      { "name": "Ngoc Anh", "role": "Flew 7 times", "text": "Ninh Binh is truly peaceful as its name. Scenic mountains are stunning!" },
-      { "name": "Chi Xuan", "role": "Travel Blogger", "text": "Trang An once and you’ll remember for life. Green water, limestone mountains, clouds gather." },
-      { "name": "Co Lan", "role": "Singapore", "text": "Tam Coc in the misty morning is like a painting. A must-try experience." },
-      { "name": "Anh Minh", "role": "Flew 12 times", "text": "Tuyet Tinh Coc has its iconic turquoise water, very photogenic, a new trending check-in spot." },
-      { "name": "Chi Diep", "role": "First time flying", "text": "Tuyet Tinh Coc is quite quiet, photos are amazing, great for couples." },
-      { "name": "Chi Xuan", "role": "Travel Blogger", "text": "Not only beautiful, Ninh Binh has a profound, Vietnamese serenity. Definitely worth returning." }
+      { "name": "Minh", "role": "Flew 7 times", "text": "Just a few minutes in the air but the feeling is incredible. Gliding over the mountains, you truly realize how beautiful Ninh Binh is. Everyone should try it at least once." },
+      { "name": "Khanh", "role": "Travel Blogger", "text": "After flying, I only had one thought: why didn’t I do this sooner? It’s thrilling yet relaxing, and the scenery of Ninh Binh from above is absolutely mind-blowing." },
+      { "name": "Minh Ha", "role": "From Singapore", "text": "The moment we soared over Hang Mua was the highlight. Seeing every step and cliff I once climbed – from the sky, you realize how majestic it really is." },
+      { "name": "Hoang", "role": "Flew 12 times", "text": "Flying above the golden rice fields near Tam Coc was unreal. The endless green and gold beneath your feet is pure magic. I can’t wait to come back." },
+      { "name": "Lisa", "role": "First-time flyer", "text": "It was soft, peaceful, and honestly quite touching. I didn’t scream, I didn’t panic. I just felt… happy." },
+      { "name": "Daniel", "role": "Travel Blogger", "text": "The pilot made me feel completely safe. I just sat back, relaxed, and took in the incredible views. Ninh Binh looks totally different from the sky." }
     ]
   }
 }
