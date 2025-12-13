@@ -25,7 +25,7 @@ const steps = [
 export default function BookingSteps() {
   const { t } = useTranslation("common");
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-b from-white to-cyan-50 overflow-hidden">
+    <section className="py-20 lg:py-0 bg-gradient-to-b from-white to-cyan-50 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Tiêu đề */}
         <motion.div
@@ -35,7 +35,7 @@ export default function BookingSteps() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 lg:mb-16"
         >
-878          <h2 className="text-4xl lg:text-6xl font-black tracking-tight bg-gradient-to-r from-gray-800 via-cyan-700 to-gray-900 bg-clip-text text-transparent">
+        <h2 className="text-4xl lg:text-6xl font-black tracking-tight bg-gradient-to-r from-gray-800 via-cyan-700 to-gray-900 bg-clip-text text-transparent">
             {t("booking.title")}
           </h2>
           <p className="mt-4 text-lg text-gray-600">{t("booking.desc")}</p>

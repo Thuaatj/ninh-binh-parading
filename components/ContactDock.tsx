@@ -51,7 +51,7 @@ export default function ContactDock() {
         </a>
 
         <a
-          href="#"
+          href="https://api.whatsapp.com/send/?phone=84392806307&text&type=phone_number&app_absent=0"
           className="social whatsapp"
           title="WhatsApp"
           target="_blank"
@@ -63,7 +63,7 @@ export default function ContactDock() {
           />
         </a>
 
-        <a
+        {/* <a
           href="#"
           className="social messenger"
           title="Messenger"
@@ -74,10 +74,23 @@ export default function ContactDock() {
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxqF5nN-XjhMZ50aNI2-Ud93SfwQHptgVAaA&s"
             alt="Messenger"
           />
+        </a> */}
+
+         <a
+          href="https://www.facebook.com/share/1XDTTvezVb/"
+          className="social messenger"
+          title="Messenger"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Logo_de_Facebook.png"
+            alt="Messenger"
+          />
         </a>
 
         <a
-          href="#"
+          href="https://www.instagram.com/paraglidingninhbinh?igsh=MTczYzFvNWI0MnQxOQ=="
           className="social instagram"
           title="Instagram"
           target="_blank"

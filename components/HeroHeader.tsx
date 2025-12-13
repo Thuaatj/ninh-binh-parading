@@ -88,7 +88,7 @@ export default function HeroHeader() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        className={`fixed inset-x-0 top-0 z-50 h-15 transition-all duration-500 
+        className={`fixed inset-x-0 top-0 z-50 h-20 transition-all duration-500 
           font-['Roboto_Condensed'] uppercase tracking-wider text-sm font-semibold ${
           scrolled
             ? "bg-gradient-to-r from-[#00101d] via-[#002f4b] to-[#004d73] shadow-2xl backdrop-blur-xl text-[#ffe761]"
@@ -103,8 +103,8 @@ export default function HeroHeader() {
             transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
           >
             <Image
-              src="https://magictravel.vn/img/general/logo.webp"
-              alt="Hoi An Paragliding"
+              src="/images/logo2.png"
+              alt="Ninh Binh Paragliding"
               width={230}
               height={50}
               priority
@@ -173,7 +173,6 @@ export default function HeroHeader() {
                           </div>
                         ))}
 
-                        {/* HỘI AN & ĐÀ NẴNG */}
                         {(item.key === "hoi_an" || item.key === "da_nang") && (
                           <div className="grid grid-cols-2 gap-3">
                             {menuData[item.key].map((place: string) => (
@@ -198,8 +197,8 @@ export default function HeroHeader() {
             {/* SOCIAL ICONS */}
             <div className="hidden md:flex items-center gap-4">
               {[
-                { name: "facebook", url: "https://upload.wikimedia.org/wikipedia/commons/e/ee/Logo_de_Facebook.png", link: "https://facebook.com/yourpage" },
-                { name: "instagram", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-LEWI88wVZBQZ4YmnUfwXBQb02j8DbJL--g&s", link: "https://instagram.com/yourpage" },
+                { name: "facebook", url: "https://upload.wikimedia.org/wikipedia/commons/e/ee/Logo_de_Facebook.png", link: "https://www.facebook.com/share/1XDTTvezVb/" },
+                { name: "instagram", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-LEWI88wVZBQZ4YmnUfwXBQb02j8DbJL--g&s", link: "https://www.instagram.com/paraglidingninhbinh?igsh=MTczYzFvNWI0MnQxOQ==" },
                 { name: "tiktok", url: "https://img.freepik.com/vector-cao-cap/logo-tik-tok_578229-290.jpg?w=740", link: "https://tiktok.com/@youraccount" },
               ].map((social) => (
                 <motion.a

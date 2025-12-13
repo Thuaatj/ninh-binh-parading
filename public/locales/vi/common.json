@@ -56,70 +56,84 @@
   },
   "tours": {
     "section_title": "CÁC GÓI TOUR",
-    "section_subtitle": "Trải nghiệm độc đáo tại Hạ Long – nơi bạn vừa lướt trên mây vừa lưu giữ những khoảnh khắc khó quên...",
+    "section_subtitle": "Trải nghiệm dù lượn Ninh Bình – Nơi bạn sẽ lướt giữa non nước hữu tình và núi đá vôi hùng vĩ.",
     "highlights_label": "ĐIỂM NỔI BẬT:",
     "button_book": "ĐẶT NGAY",
+    
+    "experience": {
+      "title": "MỘT NGÀY LÀM NÔNG DÂN",
+      "subtitle": "Hóa thân thành người bản địa",
+      "main_desc": "Trải nghiệm cuộc sống thôn quê yên bình tại Ninh Bình cùng các hoạt động đặc trưng:",
+      "activities": "ĐẠP XE - CƯỠI TRÂU - CHĂN VỊT",
+      "desc": "Sống trọn một ngày như người dân Ninh Bình thực thụ: đạp xe qua cánh đồng lúa, cưỡi trâu, chăn vịt, hái rau và thưởng thức bữa cơm dân dã cùng bà con địa phương.",
+      "photo_titles": [
+        "Đạp xe qua đồng lúa vàng",
+        "Cưỡi trâu giữa cánh đồng",
+        "Chăn vịt & cuộc sống quê"
+      ]
+    },
+    
     "items": [
       {
-        "title": "ĐÁNH THỨC TÂM HỒN",
-        "desc": "Trải nghiệm bay dù lượn ngắm cảnh Hạ Long từ trên cao, chiêm ngưỡng Vịnh Hạ Long – kỳ quan thiên nhiên thế giới.",
-        "highlights": [
-          "Vịnh Hạ Long – Di sản UNESCO",
-          "Đảo Tuần Châu – Trung tâm nghỉ dưỡng",
-          "Hang Sửng Sốt – Hang đẹp nhất",
-          "Làng chài Cửa Vạn"
-        ]
+      "title": "TUYỆT SẮC CỐ ĐÔ (Gói tiêu chuẩn)",
+      "desc": "Trải nghiệm bay dù lượn ngắm cảnh cơ bản, phù hợp người mới.",
+      "highlights": [
+        "View toàn cảnh Di sản Tràng An.",
+        "Ngắm sông Ngô Đồng - Tam Cốc.",
+        "Check-in đỉnh Hang Múa từ trên cao."
+      ]
       },
       {
-        "title": "VƯƠNG QUỐC ÁNH SÁNG",
-        "desc": "Bay và ngắm bình minh hoặc hoàng hôn tuyệt đẹp trên Vịnh Hạ Long.",
-        "highlights": [
-          "Bình minh & Hoàng hôn trên Vịnh",
-          "Đảo Tuần Châu & Hang Sửng Sốt",
-          "Làng chài Cửa Vạn"
-        ]
+      "title": "SĂN MẶT TRỜI (Gói đón Bình Minh/Hoàng Hôn)",
+      "desc": "Bay giờ Vàng, dành cho người thích ảnh đẹp & lãng mạn",
+      "highlights": [
+        "Săn mây vờn núi & Hoàng hôn cực phẩm.",
+        "Tràng An huyền ảo, Sông Ngô Đồng 'dát vàng'",
+        "Đỉnh Hang Múa kiêu hãnh giữa trời chuyển sắc."
+      ]
       },
       {
-        "title": "HÀNH TRÌNH TRỌN VẸN",
-        "desc": "Trải nghiệm bay trọn vẹn với tầm nhìn đẹp nhất từ trên cao.",
-        "highlights": [
-          "Bay qua Hang Sửng Sốt & Làng chài",
-          "Cầu Bãi Cháy – Biểu tượng",
-          "Bãi biển Bãi Cháy"
-        ]
+      "title": "HÀNH TRÌNH HUYỀN THOẠI (Gói VIP)",
+      "desc": "Bay lâu nhất, lộ trình dài nhất, thu trọn mọi địa hình trong tầm mắt.",
+      "highlights": [
+        "Thời gian bay lâu nhất, xa nhất.",
+        "Chiêm ngưỡng Cố đô Hoa Lư cổ kính.",
+        "Thu trọn mọi cảnh đẹp Ninh Bình. "
+      ]
       }
     ]
+    
   },
   "news": {
     "section_title": "TIN TỨC & SỰ KIỆN",
     "items": [
       {
         "tag": "NINH BINH",
-        "title": "Khám phá Tràng An – Di sản văn hóa & thiên nhiên thế giới",
+        "title": "Tràng An: Tuyệt Tác Non Nước Không Thể Bỏ Lỡ!",
         "date": "05 THÁNG 12 2025"
       },
       {
         "tag": "DU LỊCH",
-        "title": "Chinh phục Hang Múa – Nơi ngắm toàn cảnh Tam Cốc đẹp nhất",
+        "title": "Hang Múa: Leo Núi Săn View Ninh Bình Đẹp Ngoạn Mục!",
         "date": "20 THÁNG 11 2025"
       },
       {
         "tag": "TRẢI NGHIỆM",
-        "title": "Tam Cốc mùa lúa chín – Vẻ đẹp vàng rực hiếm nơi nào có",
+        "title": "Tam Cốc: Trải Nghiệm Đi Thuyền Ngắm Sông Núi Hữu Tình!",
         "date": "10 THÁNG 12 2025"
       }
     ]
   },
   "location": {
     "title": "VỊ TRÍ ĐỊA LÝ",
-    "subtitle": "Điểm cất cánh đẹp nhất TP.HCM – View triệu đô hướng sông Sài Gòn & Landmark 81",
+    "subtitle": "Điểm cất cánh đẹp nhất Ninh Bình – Trải nghiệm dù lượn ngắm vẻ đẹp vùng đất di sản Ninh Bình",
     "card": {
       "title": "ĐIỂM CẤT CÁNH",
-      "city": "TP. HỒ CHÍ MINH"
+      "city": "Ninh Bình"
     },
     "address": {
       "label": "Địa chỉ chính xác:",
-      "content": "Số 10 đường T\nKhu đô thị Lakeview City, Phường An Phú\nTP. Thủ Đức, TP. Hồ Chí Minh"
+      "content": "7WGR+QPX Đối diện 368, Ninh Nhật, Hoa Lư, Ninh Bình"
     },
     "hours": {
       "label": "Giờ bay:",
@@ -156,12 +170,12 @@
       "bottom": "CỦA BẠN"
     },
     "items": [
-      { "name": "Ngọc Anh", "role": "Đã bay 7 lần", "text": "Ninh Bình thật sự yên bình đúng như tên gọi. Cảnh núi non hữu tình quá đẹp!" },
-      { "name": "Chị Xuân", "role": "Travel Blogger", "text": "Đi Tràng An một lần là nhớ cả đời. Nước xanh, núi đá, trời mây hội tụ." },
-      { "name": "Cô Lan", "role": "Singapore", "text": "Tam Cốc buổi sáng sương mờ đẹp như tranh. Một trải nghiệm đáng thử." },
-      { "name": "Anh Minh", "role": "Bay 12 lần", "text": "Tuyệt Tình Cốc có màu nước xanh ngọc đặc trưng, lên hình rất nổi bật, là điểm check-in mới nổi được giới trẻ yêu thích." },
-      { "name": "Chị Diệp", "role": "Lần đầu bay", "text": "Khu du lịch Tuyệt Tình Cốc khá vắng, chụp ảnh siêu đẹp, thích hợp đi cặp đôi." },
-      { "name": "Chị Xuân", "role": "Travel Blogger", "text": "Không chỉ đẹp, Ninh Bình còn mang vẻ trầm mặc rất Việt Nam. Rất xứng đáng để quay lại." }
+      { "name": "Anh Minh", "role": "Đã bay 7 lần", "text": "Chỉ vài phút thôi mà cảm giác rất đã. Lúc lượn qua mấy dãy núi tự nhiên thấy Ninh Bình đẹp thật sự. Mình nghĩ ai cũng nên thử một lần cho biết." },
+      { "name": "Chị Khanh", "role": "Travel Blogger", "text": "Bay xong mình chỉ nghĩ: sao trước giờ không thử? Cảm giác dễ chịu lắm, kiểu vừa hồi hộp nhẹ, vừa vui, cảnh ở Ninh Bình thì đẹp choáng ngợp luôn." },
+      { "name": "Minh Hà", "role": "Singapore", "text": "Đoạn lượn qua khu Hang Múa làm mình bất ngờ nhất. Thấy từng bậc thang, từng vách núi. Mấy chỗ từng leo bộ giờ nhìn từ trên mới thấy nó hùng vĩ cỡ nào." },
+      { "name": "Anh Hoàng", "role": "Bay 12 lần", "text": "Đoạn gió đưa mình ra khu đồng lúa ven Tam Cốc đẹp kinh khủng. Màu vàng xanh trải dài dưới chân nhìn rất đã mắt. Mình chỉ muốn quay lại lần nữa." },
+      { "name": "Lisa", "role": "Lần đầu bay", "text": "It was soft, peaceful, and honestly quite touching. I didn’t scream, I didn’t panic. I just felt… happy." },
+      { "name": "Daniel", "role": "Travel Blogger", "text": "The pilot made me feel super safe. I just sat there enjoying the view. Ninh Binh looks totally different from above." }
     ]
   }
 }

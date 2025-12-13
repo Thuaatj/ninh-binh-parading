@@ -1,4 +1,6 @@
+import BackToTopButton from '@/components/BackToTopButton';
 import BookingSteps from '@/components/BookingSteps';
+import ContactDock from '@/components/ContactDock';
 import Footer from '@/components/Footer';
 import HeroHeader from '@/components/HeroHeader';
 import LocationSection from '@/components/LocationSection';
@@ -10,6 +12,8 @@ export default function Home() {
   return (
     <>
       <HeroHeader />
+      <BackToTopButton />
+      <ContactDock />
       <TourPackages />
       <BookingSteps />
       <LocationSection />

@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function HoiAnDropdown({ scrolled }: { scrolled: boolean }) {
   const [open, setOpen] = useState(false);
   const places = [
-    { title: "Phố Cổ Hội An", img: "https://suntechvn.vn/wp-content/uploads/2023/01/dai-truyen-hinh-bac-giang-1024x768.jpg" },
+    { title: "Ninh Bình", img: "https://suntechvn.vn/wp-content/uploads/2023/01/dai-truyen-hinh-bac-giang-1024x768.jpg" },
     { title: "Chùa Cầu", img: "https://suntechvn.vn/wp-content/uploads/2023/01/dai-truyen-hinh-bac-giang-1024x768.jpg" },
     { title: "Làng Rau Trà Quế", img: "https://suntechvn.vn/wp-content/uploads/2023/01/dai-truyen-hinh-bac-giang-1024x768.jpg" },
     { title: "Rừng Dừa Bảy Mẫu", img: "https://suntechvn.vn/wp-content/uploads/2023/01/dai-truyen-hinh-bac-giang-1024x768.jpg" },
@@ -14,7 +14,7 @@ export default function HoiAnDropdown({ scrolled }: { scrolled: boolean }) {
   return (
     <div className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
       <button className={`px-5 py-6 text-sm font-medium tracking-wider transition ${scrolled ? "text-gray-800 hover:text-blue-600" : "text-white hover:text-blue-300"}`}>
-        HỘI AN
+        Ninh Bình
       </button>
 
       {open && (

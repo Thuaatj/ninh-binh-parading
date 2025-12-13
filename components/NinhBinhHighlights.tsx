@@ -25,7 +25,7 @@ export default function NewsCards() {
   const { t } = useTranslation("common");
   const news = getNewsData(t);
   return (
-    <section className="py-20 lg:py-32 bg-white">
+    <section className="py-5 lg:py-15 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
         <h2 className="text-center text-5xl lg:text-6xl font-black bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-20">
           {t("news.section_title")}
