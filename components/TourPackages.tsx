@@ -42,7 +42,7 @@ export default function TourPackages() {
   const tours = getToursData(t);
 
   return (
-    <section className="py-0 lg:py-32 bg-gradient-to-b from-gray-50 via-white to-gray-50">
+    <section className="py-20 lg:py-32 bg-gradient-to-b from-gray-50 via-white to-gray-50">
       <div className="container mx-auto px-6 lg:px-12">
         {/* TIÊU ĐỀ + ẢNH 3D SIÊU ĐẸP */}
         <motion.div
