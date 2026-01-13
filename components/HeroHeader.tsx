@@ -36,8 +36,8 @@ export default function HeroHeader() {
   // DỮ LIỆU ĐÃ ĐƯỢC DỊCH SANG TIẾNG ANH
   const menuData: Record<string, any[]> = {
     booking: [
-      { title: "40% OFF for groups of 6+", desc: "Super hot deal", img: "https://halongparagliding.com/wp-content/uploads/2025/11/z7260492120163_63794d4dbef5656cb23f058445ea2f69.jpg" },
-      { title: "Tandem flight + Free 4K video", desc: "Professional drone filming", img: "https://halongparagliding.com/wp-content/uploads/2025/11/z7260492120163_63794d4dbef5656cb23f058445ea2f69.jpg" },
+      { title: "40% OFF for groups of 6+", desc: "Super hot deal", img: "https://halotravel.vn/wp-content/uploads/2021/11/bay-du-luon-doi-bu-8.jpg" },
+      { title: "Tandem flight + Free 4K video", desc: "Professional drone filming", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDu7wqLMC-35wr6GuQFBtHlq2bXnHHUqD0iw&s" },
     ],
     events: [
       { title: "Morning flight", time: "06:00 – 10:00", price: "1.800.000₫" },
@@ -122,7 +122,7 @@ export default function HeroHeader() {
                 onMouseLeave={() => setActiveMenu(null)}
               >
                 <motion.a
-                  href="#"
+                  href="/blog"
                   className={`flex items-center gap-1.1 px-3 py-1 transition-all duration-300 ${
                     scrolled
                       ? "text-[#ffe761] hover:text-white"
@@ -147,7 +147,7 @@ export default function HeroHeader() {
                         {/* OFFERS */}
                         {item.key === "booking" && menuData[item.key].map((x: any) => (
                           <div key={x.title} className="flex gap-4 mb-5 last:mb-0 group">
-                            <div className="w-20 h-20 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+                            <div className="w-20 h-20  overflow-hidden  flex-shrink-0">
                               <Image src={x.img} alt={x.title} width={80} height={80} className="object-cover group-hover:scale-110 transition" />
                             </div>
                             <div>

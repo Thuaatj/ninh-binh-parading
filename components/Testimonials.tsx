@@ -117,7 +117,7 @@ export default function TestimonialWithVideo() {
   const items = t("testimonials.items", { returnObjects: true }) as Array<{ name: string; role: string; text: string }>;
   const testimonials = items.map((it, i) => ({ ...it, avatar: avatars[i] }));
   return (
-    <section className="py-0 lg:py-40 bg-gradient-to-b from-white via-emerald-50/20 to-white overflow-hidden">
+    <section className="py-5 lg:py-10 bg-gradient-to-b from-white via-emerald-50/20 to-white overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
 
         {/* Title */}
@@ -126,12 +126,36 @@ export default function TestimonialWithVideo() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="text-center mb-16 lg:mb-28"
+          className="text-center mb-16 lg:mb-20"
         >
-          <h2 className="text-6xl lg:text-8xl font-black tracking-tighter text-gray-900 leading-none">
-            {t("testimonials.title")}
-          </h2>
-          <p className="mt-6 text-xl lg:text-2xl text-gray-600 font-light">
+          <div className="inline-flex flex-col lg:flex-row items-center justify-center gap-0 lg:gap-0 lg:pl-28 xl:pl-64">
+            <h2 className="text-6xl lg:text-7xl font-black tracking-tighter text-gray-900 leading-none">
+              {t("testimonials.title")}
+            </h2>
+
+            {/* Icon la bàn bên PHẢI – to, sát chữ, hiện cả mobile */}
+            <motion.div
+              animate={{
+                rotate: [0, -8, 8, -6, 6, 0],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="relative flex-shrink-0"
+            >
+              <Image
+                src="/images/logomini/6.png"  // hoặc 7.png tùy bạn thích
+                alt="Adventure Compass"
+                width={280}
+                height={280}
+                className="w-56 h-56 lg:w-72 lg:h-72 object-contain drop-shadow-2xl"
+              />
+            </motion.div>
+          </div>
+          
+          <p className="mt-[-60] text-xl lg:text-2xl text-gray-600 font-light">
             {t("testimonials.subtitle")}
           </p>
         </motion.div>
@@ -186,10 +210,34 @@ export default function TestimonialWithVideo() {
           className="relative max-w-9xl mx-auto"
         >
           <div className="text-center mb-12">
-            <h3 className="text-4xl lg:text-6xl font-black tracking-tight text-gray-900">
-              {t("testimonials.watch_title")}
-            </h3>
-            <p className="mt-4 text-lg lg:text-xl text-gray-600">
+            <div className="inline-flex flex-col-reverse lg:flex-row items-center justify-center gap-0 lg:gap-0 lg:pr-32 xl:pr-56">
+              {/* Icon la bàn bên TRÁI – to, sát chữ, hiện cả mobile */}
+              <motion.div
+                animate={{
+                  rotate: [0, -8, 8, -6, 6, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="relative flex-shrink-0 mb-10"
+              >
+                <Image
+                  src="/images/logomini/7.png"  // hoặc 6.png để giống nhau
+                  alt="Adventure Compass"
+                  width={260}
+                  height={260}
+                  className="w-52 h-52 lg:w-64 lg:h-64 object-contain drop-shadow-2xl"
+                />
+              </motion.div>
+
+              <h3 className="text-4xl lg:text-6xl font-black tracking-tight text-gray-900">
+                {t("testimonials.watch_title")}
+              </h3>
+            </div>
+            
+            <p className="mt-[-60] text-lg lg:text-xl text-gray-600">
               {t("testimonials.watch_subtitle")}
             </p>
           </div>

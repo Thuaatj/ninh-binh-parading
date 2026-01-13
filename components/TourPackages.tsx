@@ -12,7 +12,7 @@ function getToursData(t: TFunction) {
       id: 1,
       tag: "01",
       price: "2.800.000đ",
-      image: "/images/Ninh Bình 1 .jpg",
+      image: "/images/Ninh-binh-1.jpg",
     },
     {
       id: 2,
@@ -20,13 +20,13 @@ function getToursData(t: TFunction) {
       tagColor: "from-yellow-400 to-orange-500",
       price: "3.500.000đ",
       hot: true,
-      image: "/images/Ninh Bình 2.jpg",
+      image: "/images/Ninh-binh-2.jpg",
     },
     {
       id: 3,
       tag: "03",
       price: "4.200.000đ",
-      image: "/images/Ninh Bình 3.jpg",
+      image: "/images/Ninh-binh-3.jpg",
     },
   ];
   const localized = t("tours.items", { returnObjects: true }) as Array<{
@@ -84,9 +84,41 @@ export default function TourPackages() {
             </motion.div>
           </div>
 
+           {/* TIÊU ĐỀ CHÍNH + ICON BÊN PHẢI VỚI HIỆU ỨNG RUNG */}
+          <div className="
+            relative mt-5
+            flex flex-col lg:flex-row
+            justify-center items-center
+            gap-4 lg:gap-0
+            lg:left-20
+          ">
+          {/* Tiêu đề chính - vẫn căn giữa hoàn hảo */}
           <h2 className="mt-6 text-5xl lg:text-7xl font-black tracking-tight text-center bg-gradient-to-r from-gray-900 via-cyan-700 to-gray-900 bg-clip-text text-transparent">
-            {t("tours.section_title")}
-          </h2>
+                {t("tours.section_title")}
+              </h2>
+
+          {/* Icon lớn hơn + hiệu ứng rung rung nhẹ nhàng */}
+          <motion.div
+          animate={{
+            rotate: [0, -8, 8, -6, 6, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="relative flex-shrink-0"
+        >
+          <Image
+            src="/images/logomini/3.png"
+            alt="Golden Adventure Compass"
+            width={160}
+            height={160}
+            className="object-contain drop-shadow-2xl"  // Giữ shadow nhẹ để nổi 3D tự nhiên
+          />
+          {/* ĐÃ BỎ HOÀN TOÀN LỚP GLOW – ICON BÂY GIỜ SÁNG RỰC & SẠCH SẼ */}
+        </motion.div>
+        </div>
           <p className="mt-4 text-lg lg:text-xl text-gray-600 text-center max-w-4xl mx-auto font-light leading-relaxed">
             {t("tours.section_subtitle")}
           </p>
@@ -176,30 +208,40 @@ export default function TourPackages() {
                     ))}
                   </div>
 
-                  <motion.button
-                    whileHover={{ scale: 1.12, y: -4 }}
-                    whileTap={{ scale: 0.96 }}
-                    className="mt-auto relative w-full py-4 rounded-full font-extrabold text-lg 
-                              text-black shadow-[0_4px_14px_rgba(0,0,0,0.1)]
-                              border-2 border-pink-300 bg-white overflow-hidden group/button"
+                  <a
+                    href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F934578419729916"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full"
                   >
-                    <span className="relative z-20">{t("tours.button_book")}</span>
+                    <motion.button
+                      whileHover={{ scale: 1.12, y: -4 }}
+                      whileTap={{ scale: 0.96 }}
+                      className="mt-auto relative w-full py-4 rounded-full font-extrabold text-lg 
+                                text-black shadow-[0_4px_14px_rgba(0,0,0,0.1)]
+                                border-2 border-pink-300 bg-white overflow-hidden group/button"
+                    >
+                      <span className="relative z-20">{t("tours.button_book")}</span>
 
-                    <motion.div
-                      className="absolute inset-0 rounded-full 
-                                bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200"
-                      initial={{ x: "-120%" }}
-                      whileHover={{ x: "0%" }}
-                      transition={{ duration: 0.45, ease: "easeOut" }}
-                    />
+                      {/* gradient animation */}
+                      <motion.div
+                        className="absolute inset-0 rounded-full 
+                                  bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200"
+                        initial={{ x: "-120%" }}
+                        whileHover={{ x: "0%" }}
+                        transition={{ duration: 0.45, ease: "easeOut" }}
+                      />
 
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-r 
-                                    from-pink-100 via-purple-100 to-blue-100 
-                                    opacity-0 blur-xl group-hover/button:opacity-80 
-                                    transition-opacity duration-300" />
+                      {/* hover glow */}
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-r 
+                                      from-pink-100 via-purple-100 to-blue-100 
+                                      opacity-0 blur-xl group-hover/button:opacity-80 
+                                      transition-opacity duration-300" />
 
-                    <div className="absolute inset-0 rounded-full border border-white/60 z-10 pointer-events-none"></div>
-                  </motion.button>
+                      {/* outline */}
+                      <div className="absolute inset-0 rounded-full border border-white/60 z-10 pointer-events-none" />
+                    </motion.button>
+                  </a>
                 </div>
               </motion.div>
             </motion.div>
@@ -215,9 +257,44 @@ export default function TourPackages() {
           className="mt-24 lg:mt-32 max-w-7xl mx-auto"
         >
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-4xl lg:text-6xl font-black tracking-tight bg-gradient-to-r from-green-600 via-emerald-600 to-teal-700 bg-clip-text text-transparent">
+            {/* TIÊU ĐỀ – GIỮ CHÍNH GIỮA TUYỆT ĐỐI */}
+        <h2 className="
+          inline-block
+          text-4xl lg:text-6xl
+          font-black tracking-tight
+          bg-gradient-to-r from-green-600 via-amber-500 to-green-700 via-emerald-600
+          bg-clip-text text-transparent
+          relative
+        ">
+          {t("tours.experience.title")}
+
+          {/* ICON BÊN TRÁI – TO HƠN + RUNG */}
+          <motion.div
+            animate={{ rotate: [0, -8, 8, -6, 6, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="
+              absolute
+              left-[110px] lg:left-[-150px]
+              top-[-160] lg:top-[-100] -translate-y-1/2
+              flex-shrink-0
+            "
+          >
+            <Image
+              src="/images/logomini/2.png"
+              alt="Adventure Compass Left"
+              width={190}
+              height={190}
+              className="
+                object-contain drop-shadow-2xl
+                w-30 h-30
+                lg:w-54 lg:h-54
+              "
+            />
+          </motion.div>
+        </h2>
+            {/* <h2 className="text-4xl lg:text-6xl font-black tracking-tight bg-gradient-to-r from-green-600 via-emerald-600 to-teal-700 bg-clip-text text-transparent">
               {t("tours.experience.title")}
-            </h2>
+            </h2> */}
             <p className="mt-4 text-2xl lg:text-3xl font-bold text-gray-800">
               {t("tours.experience.subtitle")}
             </p>

@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 const languages = [
   { code: "vi", name: "VI", flag: "https://flagcdn.com/w40/vn.png" },
   { code: "en", name: "EN", flag: "https://flagcdn.com/w40/gb.png" },
+  { code: "ko", name: "KR", flag: "https://flagcdn.com/w40/kr.png" },
 ];
 
 export default function LanguageSwitcher({ scrolled }: { scrolled: boolean }) {
