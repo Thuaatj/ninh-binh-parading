@@ -25,13 +25,41 @@ export default function NewsCards() {
   const { t } = useTranslation("common");
   const news = getNewsData(t);
   return (
-    <section className="py-5 lg:py-15 bg-white">
+    <section className="py-0 lg:py-15 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
-        <h2 className="text-center text-5xl lg:text-6xl font-black bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-20">
+        {/* <h2 className="text-center text-5xl lg:text-6xl font-black bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-20">
           {t("news.section_title")}
-        </h2>
+        </h2> */}
+       <div className="flex flex-col items-center justify-center gap-4 mb-10 lg:mb-[-20] lg:flex-row lg:gap-0 lg:pr-48 xl:pr-64">
+  {/* ICON LẮC NHẸ */}
+  <motion.div
+    animate={{
+      rotate: [0, -5, 5, -4, 4, 0],
+    }}
+    transition={{
+      duration: 3.5,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="flex-shrink-0"
+  >
+    <Image
+      src="/images/logomini/6.png"
+      alt="News Icon"
+      width={230}
+      height={230}
+      className="w-28 h-28 lg:w-60 lg:h-60 object-contain"
+    />
+  </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-12 lg:gap-20 max-w-7xl mx-auto relative">
+  {/* TIÊU ĐỀ – GIỮ NGUYÊN */}
+  <h2 className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent text-center">
+    {t("news.section_title")}
+  </h2>
+</div>
+
+
+        <div className="grid md:grid-cols-3 gap-2 lg:gap-20 max-w-7xl mx-auto relative">
 
           {/* Đường kẻ dọc */}
           <div className="hidden md:block absolute left-1/3 top-0 bottom-0 w-px bg-gray-200" />

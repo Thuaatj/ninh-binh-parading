@@ -4,12 +4,14 @@ import { PropsWithChildren, useEffect, useState } from "react";
 import i18next from "i18next";
 import { I18nextProvider, initReactI18next } from "react-i18next";
 async function loadBundles() {
-  const [viRes, enRes] = await Promise.all([
+  const [viRes, enRes, koRes] = await Promise.all([
     fetch("/locales/vi/common.json").then((r) => r.json()),
     fetch("/locales/en/common.json").then((r) => r.json()),
+    fetch("/locales/ko/common.json").then((r) => r.json()),
   ]);
   i18next.addResourceBundle("vi", "common", viRes, true, true);
   i18next.addResourceBundle("en", "common", enRes, true, true);
+  i18next.addResourceBundle("ko", "common", koRes, true, true);
 }
 
 export default function I18nProvider({ children }: PropsWithChildren) {

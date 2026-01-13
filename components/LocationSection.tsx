@@ -12,7 +12,7 @@ export default function LocationSection() {
     <section className="py-0 lg:py-15 bg-gradient-to-br from-cyan-50 via-white to-teal-50 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
         {/* TIÊU ĐỀ + ẢNH 3D ĐẸP PHÁT KHÓC */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -26,7 +26,46 @@ export default function LocationSection() {
           <p className="mt-6 text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto font-light leading-relaxed">
             {t("location.subtitle")}
           </p>
-        </motion.div>
+        </motion.div> */}
+
+        {/* TITLE + ICON BÊN PHẢI – SÁT CHỮ HƠN, CHỮ LỚN HƠN, HIỆN MOBILE */}
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <div className="inline-flex flex-col lg:flex-row-reverse items-center justify-center gap-0 lg:gap-0 lg:pr-32 xl:pr-44">
+                <h2 className="mt-8 text-5xl lg:text-7xl font-black tracking-tight bg-gradient-to-r from-cyan-600 via-teal-600 to-emerald-700 bg-clip-text text-transparent">
+            {t("location.title")}
+          </h2>
+
+              {/* Icon la bàn bên PHẢI – sát chữ, hiện trên mobile */}
+              <motion.div
+                animate={{
+                  rotate: [0, -8, 8, -6, 6, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="relative flex-shrink-0"
+              >
+                <Image
+                  src="/images/logomini/6.png"
+                  alt="Adventure Compass"
+                  width={220}
+                  height={220}
+                  className="w-40 h-40 lg:w-52 lg:h-52 object-contain drop-shadow-2xl"
+                />
+              </motion.div>
+            </div>
+
+            <p className="mt-0 text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto font-light leading-relaxed">
+            {t("location.subtitle")}
+          </p>
+          </motion.div>
 
         {/* BỐ CỤC HIỆN ĐẠI: INFO CARD NỔI + MAP */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
@@ -127,7 +166,7 @@ export default function LocationSection() {
 
 
       </div>
-     <section className="py-28 bg-gradient-to-b from-white to-cyan-70 overflow-hidden">
+     <section className="py-20 bg-gradient-to-b from-white to-cyan-70 overflow-hidden">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
 
           {/* TITLE */}
@@ -138,10 +177,39 @@ export default function LocationSection() {
             transition={{ duration: 1 }}
             className="text-center mb-20"
           >
-            <h2 className="text-4xl lg:text-6xl font-black tracking-tight bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
+            <div className="inline-flex flex-col-reverse lg:flex-row items-center justify-center gap-0 lg:gap-0 lg:pl-38 xl:pl-56">
+              <h2 className="text-4xl lg:text-6xl font-black tracking-tight bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
               {t("location.timeline.title")}
             </h2>
-            <p className="text-gray-600 text-xl mt-4 max-w-3xl mx-auto">
+              {/* Icon la bàn bên TRÁI – sát chữ, hiện trên mobile (flex-col-reverse để icon trên mobile nằm dưới chữ) */}
+              <motion.div
+                animate={{
+                  rotate: [0, -8, 8, -6, 6, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="relative flex-shrink-0"
+              >
+                <Image
+                  src="/images/logomini/7.png"
+                  alt="Adventure Compass"
+                  width={230}
+                  height={230}
+                  className="w-36 h-36 lg:w-56 lg:h-56 object-contain drop-shadow-2xl"
+                />
+              </motion.div>
+
+              {/* <h2 className="text-5xl lg:text-7xl font-black bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent">
+                {t("location.timeline.title")}
+              </h2> */}
+            </div>
+            {/* <h2 className="text-4xl lg:text-6xl font-black tracking-tight bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
+              {t("location.timeline.title")}
+            </h2> */}
+            <p className="text-gray-600 text-xl mt-0 lg:mt-[-50] max-w-3xl mx-auto">
               {t("location.timeline.subtitle")}
             </p>
           </motion.div>
@@ -164,7 +232,7 @@ export default function LocationSection() {
                 md:grid-cols-5   /* desktop */
                 gap-10 sm:gap-4 md:gap-12 -space-y-8 md:space-y-0
                 w-full 
-                md:top-20
+                md:top-25
               "
             >
 

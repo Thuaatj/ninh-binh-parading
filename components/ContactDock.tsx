@@ -1,3 +1,4 @@
+/* eslint-disable no-var */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
@@ -5,40 +6,40 @@
 import { useEffect } from "react";
 
 export default function ContactDock() {
-  // --- Chèn Chatwoot SDK ---
-//   useEffect(() => {
-//     const BASE_URL = "https://crm.smb.securityzone.vn";
-//     const g = document.createElement("script");
-//     const s = document.getElementsByTagName("script")[0];
-//     g.src = `${BASE_URL}/packs/js/sdk.js`;
-//     g.async = true;
-//     s.parentNode?.insertBefore(g, s);
-//     g.onload = () => {
-//       // @ts-expect-error
-//       window.chatwootSDK.run({
-//         websiteToken: "u6cRPyuWKHjAiBFoe65QLNmT",
-//         baseUrl: BASE_URL,
-//       });
-//     };
-//   }, []);
+  useEffect(() => {
+    const BASE_URL = "https://crm.smb.paraglidingvietnam.com";
+    const g = document.createElement("script");
+    const s = document.getElementsByTagName("script")[0];
+    g.src = BASE_URL + "/packs/js/sdk.js";
+    g.async = true;
+    if (s.parentNode) {
+      s.parentNode.insertBefore(g, s);
+    }
+    g.onload = function() {
+      // @ts-expect-error
+      window.chatwootSDK.run({
+        websiteToken: "235Uo6i1NE2VZo5JmA3zpgGC",
+        baseUrl: BASE_URL,
+      });
+      var style = document.createElement("style");
+      style.innerHTML = ".woot--bubble-holder { display: none !important; }";
+      document.head.appendChild(style);
+    };
+  }, []);
+
+  const toggleChatwoot = () => {
+    // @ts-expect-error
+    if (window.$chatwoot) {
+      // @ts-expect-error
+      window.$chatwoot.toggle();
+    }
+  };
 
   return (
     <div className="chatbot-container">
-      {/* === Ảnh đại diện Chatbot (có hiệu ứng sóng) === */}
-      {/* <div className="chatbot-button">
-        <img
-          src="https://static.vecteezy.com/system/resources/previews/007/225/199/non_2x/robot-chat-bot-concept-illustration-vector.jpg"
-          alt="Chatbot"
-          className="chatbot-avatar"
-        />
-        <div className="chatbot-wave"></div>
-        <div className="chatbot-wave delay"></div>
-      </div> */}
-
-      {/* === Các nút MXH (hiển thị sẵn) === */}
       <div className="chatbot-socials active">
-        <a
-          href="#"
+         <a
+          href="https://zaloapp.com/qr/p/xg0f6vzmiz8n?src=qr"
           className="social zalo"
           title="Zalo"
           target="_blank"
@@ -63,21 +64,8 @@ export default function ContactDock() {
           />
         </a>
 
-        {/* <a
-          href="#"
-          className="social messenger"
-          title="Messenger"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxqF5nN-XjhMZ50aNI2-Ud93SfwQHptgVAaA&s"
-            alt="Messenger"
-          />
-        </a> */}
-
-         <a
-          href="https://www.facebook.com/share/1XDTTvezVb/"
+        <a
+          href="https://www.facebook.com/profile.php?id=61584228377610&rdid=BFOAkcHjMvAOpl97&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1XDTTvezVb%2F#"
           className="social messenger"
           title="Messenger"
           target="_blank"
@@ -88,6 +76,20 @@ export default function ContactDock() {
             alt="Messenger"
           />
         </a>
+
+        <a
+          href="https://www.messenger.com/t/934578419729916"
+          className="social messenger"
+          title="Chat Messenger"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxqF5nN-XjhMZ50aNI2-Ud93SfwQHptgVAaA&s"
+            alt="Chat Messenger"
+          />
+        </a>
+
 
         <a
           href="https://www.instagram.com/paraglidingninhbinh?igsh=MTczYzFvNWI0MnQxOQ=="
@@ -102,34 +104,11 @@ export default function ContactDock() {
           />
         </a>
 
-        {/* <a
-          href="#"
-          className="social youtube"
-          title="YouTube"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-youtube-social-media-round-icon-png-image_6315993.png"
-            alt="YouTube"
-          />
-        </a> */}
-
-        <a
-          href="#"
-          className="social tiktok"
-          title="TikTok"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="https://static.vecteezy.com/system/resources/previews/016/716/450/non_2x/tiktok-icon-free-png.png"
-            alt="TikTok"
-          />
-        </a>
+        <button onClick={toggleChatwoot} className="social chatwoot" title="Chat">
+          <img src="https://cdn-icons-png.flaticon.com/512/724/724715.png" alt="Chat" />
+        </button>
       </div>
 
-      {/* === CSS === */}
       <style jsx>{`
         .chatbot-container {
           position: fixed;
@@ -138,83 +117,15 @@ export default function ContactDock() {
           z-index: 9999;
           margin-bottom: 80px;
         }
-
-        /* Nút Chatbot */
-        .chatbot-button {
-          width: 70px;
-          height: 70px;
-          background: transparent;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          overflow: visible;
-          z-index: 10;
-          animation: chatbotShake 3s infinite;
-        }
-
-        .chatbot-avatar {
-          width: 70px;
-          height: 70px;
-          border-radius: 50%;
-          object-fit: cover;
-          z-index: 2;
-        }
-
-        /* Sóng lan tỏa */
-        .chatbot-wave {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          border-radius: 50%;
-          background: rgba(51, 102, 255, 0.25);
-          animation: chatbotWave 2s infinite;
-          z-index: 1;
-        }
-
-        .chatbot-wave.delay {
-          animation-delay: 1s;
-        }
-
-        @keyframes chatbotWave {
-          0% {
-            transform: scale(1);
-            opacity: 0.8;
-          }
-          100% {
-            transform: scale(2.5);
-            opacity: 0;
-          }
-        }
-
-        @keyframes chatbotShake {
-          0%, 100% {
-            transform: rotate(0deg);
-          }
-          10%, 30%, 50%, 70%, 90% {
-            transform: rotate(-3deg);
-          }
-          20%, 40%, 60%, 80% {
-            transform: rotate(3deg);
-          }
-        }
-
-        /* Các icon MXH */
         .chatbot-socials {
           display: flex;
           flex-direction: column;
           align-items: center;
           gap: 17px;
           position: absolute;
-          bottom: 50px;
+          bottom: 0;
           right: 0;
-          transition: all 0.4s ease;
-          opacity: 1;
-          transform: translateY(0);
-          pointer-events: auto;
         }
-
         .chatbot-socials .social {
           width: 55px;
           height: 55px;
@@ -222,15 +133,25 @@ export default function ContactDock() {
           overflow: hidden;
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
           transition: transform 0.3s, box-shadow 0.3s;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          background: #1f93ff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
-
         .chatbot-socials .social img {
           width: 100%;
           height: 100%;
           border-radius: 50%;
           object-fit: cover;
         }
-
+        .chatbot-socials .social.chatwoot img {
+          width: 60%;
+          height: 60%;
+          filter: brightness(0) invert(1);
+        }
         .chatbot-socials .social:hover {
           transform: scale(1.3);
           box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);

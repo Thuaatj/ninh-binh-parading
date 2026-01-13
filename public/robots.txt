@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://paraglidingninhbinh.com/sitemap.xml

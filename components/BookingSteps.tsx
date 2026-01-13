@@ -35,9 +35,42 @@ export default function BookingSteps() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 lg:mb-16"
         >
-        <h2 className="text-4xl lg:text-6xl font-black tracking-tight bg-gradient-to-r from-gray-800 via-cyan-700 to-gray-900 bg-clip-text text-transparent">
+           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 lg:gap-0 lg:pl-28 xl:pl-38">
+    {/* Tiêu đề chính – luôn chính giữa */}
+    <h2 className="text-4xl lg:text-6xl font-black tracking-tight bg-gradient-to-r from-gray-800 via-cyan-700 to-gray-900 bg-clip-text text-transparent">
             {t("booking.title")}
           </h2>
+
+    {/* Icon la bàn vàng – trên mobile xuống dưới, desktop bên phải */}
+    <motion.div
+      animate={{
+        rotate: [0, -8, 8, -6, 6, 0],
+      }}
+      transition={{
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+      className="relative flex-shrink-0 order-2"
+    >
+      <Image
+        // Icon đẹp nhất: vintage brass compass 3D realistic, sáng bóng, transparent
+        src="/images/logomini/4.png"
+        
+        // Option thay thế nếu muốn vàng luxury hơn:
+        // src="https://thumbs.dreamstime.com/b/gold-compass-nautical-navigation-tool-direction-travel-golden-png-transparent-image-representing-compasses-tools-368188936.jpg"
+        
+        alt="Golden Adventure Compass"
+        width={500}   // Width gốc lớn để chất lượng cao
+        height={500}  // Height gốc
+        className="mt-[-30] w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 object-contain drop-shadow-2xl"  
+        // Size responsive: mobile 128px → tablet 144px → desktop 160px
+      />
+    </motion.div>
+  </div>
+        {/* <h2 className="text-4xl lg:text-6xl font-black tracking-tight bg-gradient-to-r from-gray-800 via-cyan-700 to-gray-900 bg-clip-text text-transparent">
+            {t("booking.title")}
+          </h2> */}
           <p className="mt-4 text-lg text-gray-600">{t("booking.desc")}</p>
         </motion.div>
 

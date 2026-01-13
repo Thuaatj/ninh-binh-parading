@@ -7,3 +7,13 @@
 html, body {
   font-family: 'Roboto Condensed', sans-serif;
 }
+
+/* ===== Chatwoot Widget Custom Style ===== */
+.woot-widget-holder {
+  right: 90px !important;
+  bottom: 20px !important;
+}
+
+.woot--bubble-holder {
+  display: none !important;
+}
